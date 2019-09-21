@@ -48,6 +48,7 @@
 	</files>
 	<languages folder="site">
 		<language tag="$TM_LANGUAGE">language/$TM_LANGUAGE/$TM_LANGUAGE.com_${1/(.+)/\L\1/g}.ini</language>
+		<language tag="$TM_LANGUAGE_ES">language/$TM_LANGUAGE_ES/$TM_LANGUAGE_ES.com_${1/(.+)/\L\1/g}.ini</language>
 	</languages>
 	<administration>
 		<menu img="class:${1/(.+)/\L\1/g}">com_${1/(.+)/\L\1/g}</menu>
@@ -76,6 +77,8 @@
 		<languages folder="admin">
 			<language tag="$TM_LANGUAGE">language/$TM_LANGUAGE/$TM_LANGUAGE.com_${1/(.+)/\L\1/g}.ini</language>
 			<language tag="$TM_LANGUAGE">language/$TM_LANGUAGE/$TM_LANGUAGE.com_${1/(.+)/\L\1/g}.sys.ini</language>
+			<language tag="$TM_LANGUAGE_ES">language/$TM_LANGUAGE_ES/$TM_LANGUAGE_ES.com_${1/(.+)/\L\1/g}.ini</language>
+			<language tag="$TM_LANGUAGE_ES">language/$TM_LANGUAGE_ES/$TM_LANGUAGE_ES.com_${1/(.+)/\L\1/g}.sys.ini</language>
 		</languages>
 	</administration>
 	<!-- These are used for backups to determine which tables to backup; ones marked optional are only backed up if they exist. -->

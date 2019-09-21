@@ -24,6 +24,8 @@
 	<languages folder="language">
 		<language tag="$TM_LANGUAGE">$TM_LANGUAGE/$TM_LANGUAGE.mod_${TM_COMPONENT/(.+)/\L\1/g}_quickicon.ini</language>
 		<language tag="$TM_LANGUAGE">$TM_LANGUAGE/$TM_LANGUAGE.mod_${TM_COMPONENT/(.+)/\L\1/g}_quickicon.sys.ini</language>
+		<language tag="$TM_LANGUAGE_ES">$TM_LANGUAGE_ES/$TM_LANGUAGE_ES.mod_${TM_COMPONENT/(.+)/\L\1/g}_quickicon.ini</language>
+		<language tag="$TM_LANGUAGE_ES">$TM_LANGUAGE_ES/$TM_LANGUAGE_ES.mod_${TM_COMPONENT/(.+)/\L\1/g}_quickicon.sys.ini</language>
 	</languages>
 	<config>
 		<fields name="params">

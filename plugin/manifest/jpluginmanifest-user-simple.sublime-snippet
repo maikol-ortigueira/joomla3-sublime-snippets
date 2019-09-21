@@ -25,6 +25,8 @@
 	<languages folder="language">
 		<language tag="$TM_LANGUAGE">$TM_LANGUAGE/$TM_LANGUAGE.plg_user_${1/(.+)/\L\1/g}.ini</language>
 		<language tag="$TM_LANGUAGE">$TM_LANGUAGE/$TM_LANGUAGE.plg_user_${1/(.+)/\L\1/g}.sys.ini</language>
+		<language tag="$TM_LANGUAGE_ES">$TM_LANGUAGE_ES/$TM_LANGUAGE_ES.plg_user_${1/(.+)/\L\1/g}.ini</language>
+		<language tag="$TM_LANGUAGE_ES">$TM_LANGUAGE_ES/$TM_LANGUAGE_ES.plg_user_${1/(.+)/\L\1/g}.sys.ini</language>
 	</languages>
 	<config>
 		<fields name="params">
