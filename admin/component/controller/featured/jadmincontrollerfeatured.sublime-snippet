@@ -22,7 +22,7 @@ class ${TM_COMPONENT/(.+)/\u\1/g}Controller${1:Featured} extends ${TM_COMPONENT/
 	public function delete()
 	{
 		// Check for request forgeries.
-		JSession::checkToken() or die(JText::_('JINVALID_TOKEN'));
+		JSession::checkToken() or die(JText::_('JINVALID_TOKEN_maikol'));
 
 		// Initialiase variables.
 		\$user = JFactory::getUser();
