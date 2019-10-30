@@ -10,7 +10,7 @@ JModelLegacy::addIncludePath(JPATH_ADMINISTRATOR . '/components/com_${TM_COMPONE
  * @author      $TM_FULLNAME <$TM_EMAIL>
  * @since       $TM_VERSION
  */
-abstract class Mod${TM_COMPONENT/(.+)/\u\1/g}${1:Plural}Helper
+abstract class Mod${TM_COMPONENT/(.+)/\u\1/g}${1:${TM_PLURAL/(.+)/\u\1/g}}Helper
 {
 	/**
 	 * Get a list of the ${1/(.+)/\L\1/g}.

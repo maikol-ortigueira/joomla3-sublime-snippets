@@ -34,7 +34,7 @@ abstract class ${TM_COMPONENT/(.+)/\u\1/g}HelperRoute
 	 *
 	 * @since   $TM_VERSION
 	 */
-	public static function get${1:Singular}Route(\$id, \$language = 0)
+	public static function get${1:${TM_SINGULAR/(.+)/\u\1/g}}Route(\$id, \$language = 0)
 	{
 		// Initialiase variables.
 		\$needles = array(

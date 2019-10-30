@@ -125,7 +125,7 @@ class ${TM_COMPONENT/(.+)/\u\1/g}HelperQuery
 		{
 			// Calculate voting count.
 			\$select = ' , ROUND(v.rating_sum / v.rating_count) AS rating, v.rating_count';
-			\$join   = ' LEFT JOIN #__${TM_COMPONENT/(.+)/\L\1/g}_rating AS v ON a.id = v.${1:singular}_id';
+			\$join   = ' LEFT JOIN #__${TM_COMPONENT/(.+)/\L\1/g}_rating AS v ON a.id = v.${1:${TM_SINGULAR/(.+)/\L\1/g}}_id';
 		}
 		else
 		{

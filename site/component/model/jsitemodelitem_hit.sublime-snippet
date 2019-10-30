@@ -12,7 +12,7 @@ public function hit(\$pk = null)
 {
 	if (empty(\$id))
 	{
-		\$id = \$this->getState('${1:singular}.id');
+		\$id = \$this->getState('${1:${TM_SINGULAR/(.+)/\L\1/g}}.id');
 	}
 
 	\$${1/(.+)/\L\1/g} = \$this->getTable('${1/(.+)/\u\1/g}', '${TM_COMPONENT/(.+)/\u\1/g}Table');

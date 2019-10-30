@@ -4,7 +4,7 @@
 	type: 'POST',
 	url: 'index.php?option=com_${TM_COMPONENT/(.+)/\L\1/g}&task=${1:controller}.get${2:${1/(.+)/\u\1/g}}Ajax&format=json',
 	data: {
-		${3:singular}_id: '<?php echo \$this->item->id; ?>',
+		${3:${TM_SINGULAR/(.+)/\L\1/g}}_id: '<?php echo \$this->item->id; ?>',
 		'<?php echo JSession::getFormToken(); ?>': 1
 	},
 	dataType: 'json',
@@ -18,7 +18,7 @@
 		}
 
 		if (r.data) {
-			\$("#${4:plural}_list").tmpl(r.data, {
+			\$("#${4:${TM_PLURAL/(.+)/\L\1/g}}_list").tmpl(r.data, {
 				returnPage: function() {
 					return '<?php echo \$return; ?>';
 				}

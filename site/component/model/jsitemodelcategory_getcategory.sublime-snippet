@@ -14,7 +14,7 @@ public function getCategory()
 		{
 			\$params  = \$this->state->params;
 			\$options = array();
-			\$options['countItems'] = \$params->get('show_cat_num_${1:plural}', 1) || !\$params->get('show_empty_categories_cat', 0);
+			\$options['countItems'] = \$params->get('show_cat_num_${1:${TM_PLURAL/(.+)/\L\1/g}}', 1) || !\$params->get('show_empty_categories_cat', 0);
 		}
 		else
 		{

@@ -1,5 +1,5 @@
 <snippet>
-	<content><![CDATA[echo JHtml::_('bootstrap.startAccordion', '${2:singular}Options', array('active' => 'collapse0'));
+	<content><![CDATA[echo JHtml::_('bootstrap.startAccordion', '${2:${TM_SINGULAR/(.+)/\L\1/g}}Options', array('active' => 'collapse0'));
 	\$fieldSets = \$this->form->getFieldsets('${1:params}');
 	\$i         = 0;
 	foreach (\$fieldSets as \$name => \$fieldSet):

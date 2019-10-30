@@ -63,7 +63,7 @@ function ${TM_COMPONENT/(.+)/\L\1/g}BuildRoute(&\$query)
 		return \$segments;
 	}
 
-	if (\$view == '${1:singular}')
+	if (\$view == '${1:${TM_SINGULAR/(.+)/\L\1/g}}')
 	{
 		if (!\$menuItemGiven)
 		{

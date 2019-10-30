@@ -14,7 +14,7 @@ if (\$form == false)
 }
 
 // Check the session for previously entered form data.
-\$data = JFactory::getApplication()->getUserState('com_${TM_COMPONENT/(.+)/\L\1/g}.edit.${3:singular}.data', array());
+\$data = JFactory::getApplication()->getUserState('com_${TM_COMPONENT/(.+)/\L\1/g}.edit.${3:${TM_SINGULAR/(.+)/\L\1/g}}.data', array());
 
 // Bind the form data if present.
 if (!empty(\$data))

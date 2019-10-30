@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[/**
- * This models supports retrieving lists of ${1:singular} categories.
+ * This models supports retrieving lists of ${1:${TM_SINGULAR/(.+)/\L\1/g}} categories.
  *
  * @package     ${TM_COMPONENT/(.+)/\u\1/g}
  * @subpackage  com_${TM_COMPONENT/(.+)/\L\1/g}

@@ -8,7 +8,7 @@
  */
 public function __construct(& \$db)
 {
-	parent::__construct('#__${TM_COMPONENT/(.+)/\L\1/g}${1:_${2:plural}}', 'id', \$db);
+	parent::__construct('#__${TM_COMPONENT/(.+)/\L\1/g}${1:_${2:${TM_PLURAL/(.+)/\L\1/g}}}', 'id', \$db);
 }]]></content>
 	<tabTrigger>jadmintable___construct</tabTrigger>
 	<scope>source.php</scope>

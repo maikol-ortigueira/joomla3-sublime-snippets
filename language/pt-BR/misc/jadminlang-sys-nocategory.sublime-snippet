@@ -4,7 +4,7 @@ COM_${TM_COMPONENT/(.+)/\U\1/g}_XML_DESCRIPTION="Componente para gerenciamento d
 
 ; MENU
 
-COM_${TM_COMPONENT/(.+)/\U\1/g}_${2:PLURAL}="${3:Plural}"
+COM_${TM_COMPONENT/(.+)/\U\1/g}_${2:${TM_PLURAL/(.+)/\U\1/g}}="${3:${TM_PLURAL/(.+)/\u\1/g}}"
 
 ; SCRIPT
 

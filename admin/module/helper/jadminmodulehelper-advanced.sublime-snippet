@@ -27,7 +27,7 @@ abstract class Mod${1:${TM_MODULE/(\_+)//g}}Helper
 		\$user = JFactory::getUser();
 
 		// Get an instance of the generic ${2/(.+)/\L\1/g} model.
-		\$model = JModelLegacy::getInstance('${2:Plural}', '${TM_COMPONENT/(.+)/\u\1/g}Model', array('ignore_request' => true));
+		\$model = JModelLegacy::getInstance('${2:${TM_PLURAL/(.+)/\u\1/g}}', '${TM_COMPONENT/(.+)/\u\1/g}Model', array('ignore_request' => true));
 
 		// Set List SELECT.
 		\$model->setState('list.select', 'a.id, a.${3:title}, a.checked_out, a.checked_out_time' .

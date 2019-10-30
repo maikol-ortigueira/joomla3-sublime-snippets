@@ -10,7 +10,7 @@ if (\$type == 'update')
 
 	if (in_array(\$prefix . '${1/(.+)/\L\1/g}_tags', \$tables))
 	{
-		require_once(JPATH_ADMINISTRATOR . '/components/com_${TM_COMPONENT/(.+)/\L\1/g}/tables/${1:singular}.php');
+		require_once(JPATH_ADMINISTRATOR . '/components/com_${TM_COMPONENT/(.+)/\L\1/g}/tables/${1:${TM_SINGULAR/(.+)/\L\1/g}}.php');
 
 		\$table = new ${TM_COMPONENT/(.+)/\u\1/g}Table${1/(.+)/\u\1/g}(\$db);
 

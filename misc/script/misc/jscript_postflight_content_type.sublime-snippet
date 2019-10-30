@@ -2,7 +2,7 @@
 	<content><![CDATA[// Adding content type for ${2:${1/(.+)/\L\1/g}s}.
 \$table = JTable::getInstance('Contenttype', 'JTable');
 
-if (!\$table->load(array('type_alias' => 'com_${TM_COMPONENT/(.+)/\L\1/g}.${1:singular}')))
+if (!\$table->load(array('type_alias' => 'com_${TM_COMPONENT/(.+)/\L\1/g}.${1:${TM_SINGULAR/(.+)/\L\1/g}}')))
 {
 	// Table column.
 	\$special = new stdClass;

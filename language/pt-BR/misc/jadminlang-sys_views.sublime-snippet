@@ -1,13 +1,13 @@
 <snippet>
 	<content><![CDATA[; SYS
 
-COM_${TM_COMPONENT/(.+)/\U\1/g}_ARCHIVE_VIEW_DEFAULT_DESC="Exibir todos os ${4:plural} arquivad${6/(.+)/\L\1/g}s."
+COM_${TM_COMPONENT/(.+)/\U\1/g}_ARCHIVE_VIEW_DEFAULT_DESC="Exibir todos os ${4:${TM_PLURAL/(.+)/\L\1/g}} arquivad${6/(.+)/\L\1/g}s."
 COM_${TM_COMPONENT/(.+)/\U\1/g}_ARCHIVE_VIEW_DEFAULT_OPTION="Padrão"
 COM_${TM_COMPONENT/(.+)/\U\1/g}_ARCHIVE_VIEW_DEFAULT_TITLE="${4/(.+)/\u\1/g} Arquivad${6/(.+)/\L\1/g}s"
-COM_${TM_COMPONENT/(.+)/\U\1/g}_${1:PLURAL}_VIEW_DEFAULT_DESC="Exibir uma listagem de ${5:singular}."
+COM_${TM_COMPONENT/(.+)/\U\1/g}_${1:${TM_PLURAL/(.+)/\U\1/g}}_VIEW_DEFAULT_DESC="Exibir uma listagem de ${5:${TM_SINGULAR/(.+)/\L\1/g}}."
 COM_${TM_COMPONENT/(.+)/\U\1/g}_${1/(.+)/\U\1/g}_VIEW_DEFAULT_OPTION="Padrão"
 COM_${TM_COMPONENT/(.+)/\U\1/g}_${1/(.+)/\U\1/g}_VIEW_DEFAULT_TITLE="Listagem de ${4/(.+)/\u\1/g}"
-COM_${TM_COMPONENT/(.+)/\U\1/g}_${2:SINGULAR}_VIEW_DEFAULT_DESC="Exibir um ${5:singular} simples."
+COM_${TM_COMPONENT/(.+)/\U\1/g}_${2:${TM_SINGULAR/(.+)/\U\1/g}}_VIEW_DEFAULT_DESC="Exibir um ${5:${TM_SINGULAR/(.+)/\L\1/g}} simples."
 COM_${TM_COMPONENT/(.+)/\U\1/g}_${2/(.+)/\U\1/g}_VIEW_DEFAULT_OPTION="Padrão"
 COM_${TM_COMPONENT/(.+)/\U\1/g}_${2/(.+)/\U\1/g}_VIEW_DEFAULT_TITLE="Únic${6:o} ${5/(.+)/\u\1/g}"
 COM_${TM_COMPONENT/(.+)/\U\1/g}_CATEGORIES_VIEW_DEFAULT_DESC="Exibir uma lista de todas as categorias de ${4/(.+)/\L\1/g} dentro de uma categoria."

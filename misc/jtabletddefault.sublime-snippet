@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[<td class="center">
-	<?php echo JHtml::_('${1:jgrid}.is${2:default}', \$item->${3:field} != '0', \$i, '${4:plural}.', \$canChange && \$item->${3/(.+)/\L\1/g} != '1'); ?>
+	<?php echo JHtml::_('${1:jgrid}.is${2:default}', \$item->${3:field} != '0', \$i, '${4:${TM_PLURAL/(.+)/\L\1/g}}.', \$canChange && \$item->${3/(.+)/\L\1/g} != '1'); ?>
 </td>]]></content>
 	<tabTrigger>jtabletddefault</tabTrigger>
 	<scope>text.html</scope>

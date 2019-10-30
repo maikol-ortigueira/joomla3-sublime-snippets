@@ -49,7 +49,7 @@ public function ${1:action}()
 		}
 	}
 
-	\$this->setRedirect('index.php?option=com_${TM_COMPONENT/(.+)/\L\1/g}&view=${4:plural}');
+	\$this->setRedirect('index.php?option=com_${TM_COMPONENT/(.+)/\L\1/g}&view=${4:${TM_PLURAL/(.+)/\L\1/g}}');
 }]]></content>
 	<tabTrigger>jadmincontrollerlist_custom</tabTrigger>
 	<scope>source.php</scope>

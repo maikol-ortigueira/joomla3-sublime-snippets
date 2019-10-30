@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[// Load dependent classes.
-require_once __DIR__ . '/${2:plural}.php';
+require_once __DIR__ . '/${2:${TM_PLURAL/(.+)/\L\1/g}}.php';
 
 /**
  * ${1/(.+)/\u\1/g} list controller class.
@@ -22,7 +22,7 @@ class ${TM_COMPONENT/(.+)/\u\1/g}Controller${1:Featured} extends ${TM_COMPONENT/
 	public function delete()
 	{
 		// Check for request forgeries.
-		JSession::checkToken() or die(JText::_('JINVALID_TOKEN_maikol'));
+		JSession::checkToken() or die(JText::_('JINVALID_TOKEN'));
 
 		// Initialiase variables.
 		\$user = JFactory::getUser();

@@ -6,7 +6,7 @@
  *
  * @since   $TM_VERSION
  */
-public static function get${1:Plural}Route()
+public static function get${1:${TM_PLURAL/(.+)/\u\1/g}}Route()
 {
 	// Initialiase variables.
 	\$needles = array(

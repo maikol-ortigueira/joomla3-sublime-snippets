@@ -15,7 +15,7 @@ class ${1:${TM_COMPONENT/(.+)/\u\1/g}}Controller extends JControllerLegacy
 	 * @var     string
 	 * @since   $TM_VERSION
 	 */
-	protected \$default_view = '${2:plural}';
+	protected \$default_view = '${2:${TM_PLURAL/(.+)/\L\1/g}}';
 
 	/**
 	 * Method to display a view.

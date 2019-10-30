@@ -6,7 +6,7 @@
  *
  * @since   $TM_VERSION
  */
-public function delete${2:Singular}Ajax()
+public function delete${2:${TM_SINGULAR/(.+)/\u\1/g}}Ajax()
 {
 	// Check for request forgeries.
 	JSession::checkToken() or die(JText::_('JINVALID_TOKEN'));

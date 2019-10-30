@@ -3,7 +3,7 @@
 <ol class="nav nav-tabs nav-stacked">
 	<?php foreach (\$this->link_items as &\$item): ?>
 		<li>
-			<a href="<?php echo JRoute::_(${TM_COMPONENT/(.+)/\u\1/g}HelperRoute::get${1:Singular}Route(\$item->slug, \$item->catslug)); ?>"><?php echo \$item->${2:title}; ?></a>
+			<a href="<?php echo JRoute::_(${TM_COMPONENT/(.+)/\u\1/g}HelperRoute::get${1:${TM_SINGULAR/(.+)/\u\1/g}}Route(\$item->slug, \$item->catslug)); ?>"><?php echo \$item->${2:title}; ?></a>
 		</li>
 	<?php endforeach; ?>
 </ol>

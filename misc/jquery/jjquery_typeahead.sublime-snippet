@@ -3,7 +3,7 @@
 	mapped
 
 // Call the typeahead.
-\$('#search-${3:singular}').typeahead({
+\$('#search-${3:${TM_SINGULAR/(.+)/\L\1/g}}').typeahead({
 	source: function(query, process) {
 		\$.post('index.php?option=com_${TM_COMPONENT/(.+)/\L\1/g}&task=${1:controller}.search${2:${1/(.+)/\u\1/g}}Ajax&format=json', {
 			name: query,

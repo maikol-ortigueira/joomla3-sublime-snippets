@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[
-<?php // Code to add a link to submit an ${1:singular}. ?>
+<?php // Code to add a link to submit an ${1:${TM_SINGULAR/(.+)/\L\1/g}}. ?>
 <?php if (\$this->${2:category}->getParams()->get('access-create')): ?>
 	<?php echo JHtml::_('icon.create', \$this->${2/(.+)/\L\1/g}, \$this->${2/(.+)/\L\1/g}->params); ?>
 <?php endif; ?>

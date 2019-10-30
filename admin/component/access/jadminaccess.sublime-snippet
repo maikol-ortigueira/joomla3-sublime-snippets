@@ -53,7 +53,7 @@
 			title="JACTION_EDITOWN"
 			description="COM_CATEGORIES_ACCESS_EDITOWN_DESC" />
 	</section>
-	<section name="${2:singular}">
+	<section name="${2:${TM_SINGULAR/(.+)/\L\1/g}}">
 		<action
 			name="core.delete"
 			title="JACTION_DELETE"

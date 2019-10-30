@@ -7,7 +7,7 @@
 			<?php // Note the actions class is deprecated. Use dropdown-menu instead. ?>
 			<ul class="dropdown-menu actions">
 				<?php if (\$params->get('show_print_icon', 1)): ?>
-					<li class="print-icon"><?php echo JHtml::_('icon${1:singular}.print_popup', \$this->item, \$params); ?></li>
+					<li class="print-icon"><?php echo JHtml::_('icon${1:${TM_SINGULAR/(.+)/\L\1/g}}.print_popup', \$this->item, \$params); ?></li>
 				<?php endif; ?>
 				<?php if (\$params->get('show_email_icon', 1)): ?>
 					<li class="email-icon"><?php echo JHtml::_('icon${1/(.+)/\L\1/g}.email', \$this->item, \$params); ?></li>

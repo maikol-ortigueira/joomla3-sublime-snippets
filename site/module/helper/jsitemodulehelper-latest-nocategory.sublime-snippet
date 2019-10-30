@@ -30,7 +30,7 @@ abstract class Mod${1:${TM_MODULE/(.+)/\u\1/g}Latest}Helper
 		\$db = JFactory::getDbo();
 
 		// Get an instance of the generic ${2/(.+)/\L\1/g} model.
-		\$model = JModelLegacy::getInstance('${2:Plural}', '${TM_COMPONENT/(.+)/\u\1/g}Model', array('ignore_request' => true));
+		\$model = JModelLegacy::getInstance('${2:${TM_PLURAL/(.+)/\u\1/g}}', '${TM_COMPONENT/(.+)/\u\1/g}Model', array('ignore_request' => true));
 
 		// Set application parameters in model.
 		\$app       = JFactory::getApplication();

@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[/**
- * Method to toggle the featured setting of ${1:plural}.
+ * Method to toggle the featured setting of ${1:${TM_PLURAL/(.+)/\L\1/g}}.
  *
  * @param   array    \$pks    The ids of the items to toggle.
  * @param   integer  \$value  The value to toggle to.

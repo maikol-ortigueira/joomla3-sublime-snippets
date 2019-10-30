@@ -34,7 +34,7 @@ JHtml::_('behavior.caption');
 		</div>
 	<?php endif; ?>
 	<?php if (empty(\$this->lead_items) && empty(\$this->link_items) && empty(\$this->intro_items)): ?>
-		<?php if (\$this->params->get('show_no_${1:plural}', 1)): ?>
+		<?php if (\$this->params->get('show_no_${1:${TM_PLURAL/(.+)/\L\1/g}}', 1)): ?>
 			<p><?php echo JText::_('COM_${TM_COMPONENT/(.+)/\U\1/g}_NO_${1/(.+)/\U\1/g}'); ?></p>
 		<?php endif; ?>
 	<?php endif; ?>

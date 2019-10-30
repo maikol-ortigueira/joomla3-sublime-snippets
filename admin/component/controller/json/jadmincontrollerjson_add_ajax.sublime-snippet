@@ -6,7 +6,7 @@
  *
  * @since   $TM_VERSION
  */
-public function add${1:Singular}Ajax()
+public function add${1:${TM_SINGULAR/(.+)/\u\1/g}}Ajax()
 {
 	// Check for request forgeries.
 	JSession::checkToken() or die(JText::_('JINVALID_TOKEN'));

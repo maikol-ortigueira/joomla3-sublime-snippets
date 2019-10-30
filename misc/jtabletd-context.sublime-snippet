@@ -12,11 +12,11 @@ $trashed  = $this->state->get('filter.state') == -2 ? true : false;
 	<div class="pull-left">
 		<?php
 		// Create dropdown items.
-		JHtml::_('dropdown.edit', $item->id, '${1:singular}.');
+		JHtml::_('dropdown.edit', $item->id, '${1:${TM_SINGULAR/(.+)/\L\1/g}}.');
 		JHtml::_('dropdown.divider');
 
 		if ($item->state):
-			JHtml::_('dropdown.unpublish', 'cb' . $i, '${2:plural}.');
+			JHtml::_('dropdown.unpublish', 'cb' . $i, '${2:${TM_PLURAL/(.+)/\L\1/g}}.');
 		else :
 			JHtml::_('dropdown.publish', 'cb' . $i, '${2/(.+)/\L\1/g}.');
 		endif;

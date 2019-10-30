@@ -76,7 +76,7 @@ class ${TM_COMPONENT/(.+)/\u\1/g}ViewForm extends JViewLegacy
 
 		if (!empty(\$this->item->id))
 		{
-			\$this->item->tags->getItemTags('com_${TM_COMPONENT/(.+)/\L\1/g}.${1:singular}.', \$this->item->id);
+			\$this->item->tags->getItemTags('com_${TM_COMPONENT/(.+)/\L\1/g}.${1:${TM_SINGULAR/(.+)/\L\1/g}}.', \$this->item->id);
 		}
 
 		if (!empty(\$this->item) && isset(\$this->item->id))

@@ -8,7 +8,7 @@
  *
  * @since   $TM_VERSION
  */
-public static function get${1:Singular}Route(\$id)
+public static function get${1:${TM_SINGULAR/(.+)/\u\1/g}}Route(\$id)
 {
 	// Initialiase variables.
 	\$needles = array(

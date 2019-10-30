@@ -10,7 +10,7 @@ protected function loadFormData()
 {
 	// Check the session for previously entered form data.
 	\$app  = JFactory::getApplication();
-	\$data = \$app->getUserState('com_${TM_COMPONENT/(.+)/\L\1/g}.edit.${1:singular}.data', array());
+	\$data = \$app->getUserState('com_${TM_COMPONENT/(.+)/\L\1/g}.edit.${1:${TM_SINGULAR/(.+)/\L\1/g}}.data', array());
 
 	if (empty(\$data))
 	{

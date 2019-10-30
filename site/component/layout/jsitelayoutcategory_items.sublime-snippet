@@ -16,7 +16,7 @@ JHtml::_('behavior.framework');
 
 if (!empty(\$this->items))
 {
-	foreach (\$this->items as \$${1:singular})
+	foreach (\$this->items as \$${1:${TM_SINGULAR/(.+)/\L\1/g}})
 	{
 		if (\$${1/(.+)/\L\1/g}->params->get('access-edit'))
 		{

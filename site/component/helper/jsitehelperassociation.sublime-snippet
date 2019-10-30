@@ -33,7 +33,7 @@ abstract class ${TM_COMPONENT/(.+)/\u\1/g}HelperAssociation extends CategoryHelp
 		\$view = is_null(\$view) ? \$app->input->get('view') : \$view;
 		\$id   = empty(\$id) ? \$app->input->getInt('id') : \$id;
 
-		if (\$view == '${1:singular}')
+		if (\$view == '${1:${TM_SINGULAR/(.+)/\L\1/g}}')
 		{
 			if (\$id)
 			{

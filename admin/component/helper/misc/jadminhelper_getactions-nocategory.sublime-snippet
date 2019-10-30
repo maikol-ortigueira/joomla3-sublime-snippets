@@ -23,7 +23,7 @@ public static function getActions(\$id = 0, \$assetName = '')
 	}
 	else
 	{
-		\$section = '${1:singular}';
+		\$section = '${1:${TM_SINGULAR/(.+)/\L\1/g}}';
 		\$assetName .= '.${1/(.+)/\L\1/g}.' . (int) \$id;
 	}
 

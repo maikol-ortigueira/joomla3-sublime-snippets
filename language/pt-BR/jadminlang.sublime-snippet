@@ -15,7 +15,7 @@ COM_${1/(.+)/\U\1/g}_BATCH_TIP="Se escolher copiar um ${3:${2/(.+)(s\b)/\L\1/g}}
 
 ; CHANGE
 
-COM_${1/(.+)/\U\1/g}_CHANGE_${4:SINGULAR}="Alterar ${6:${3/(.+)/\u\1/g}}"
+COM_${1/(.+)/\U\1/g}_CHANGE_${4:${TM_SINGULAR/(.+)/\U\1/g}}="Alterar ${6:${3/(.+)/\u\1/g}}"
 
 ; CONFIG
 

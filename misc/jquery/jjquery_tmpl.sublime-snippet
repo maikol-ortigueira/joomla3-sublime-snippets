@@ -1,5 +1,5 @@
 <snippet>
-	<content><![CDATA[<script id="${1:plural}_list" type="text/x-jquery-tmpl">
+	<content><![CDATA[<script id="${1:${TM_PLURAL/(.+)/\L\1/g}}_list" type="text/x-jquery-tmpl">
 	<tr class="${2:${1/(.+)(s\b)/\L\1/g}}">
 		<td class="hidden-phone">
 			\${id}

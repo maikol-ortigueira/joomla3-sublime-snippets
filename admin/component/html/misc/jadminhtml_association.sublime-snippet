@@ -12,7 +12,7 @@ public static function association(\$${1:${TM_FILENAME/(.*?)(\..+)/\L$1/}}id)
 	\$html = '';
 
 	// Get the associations.
-	if (\$associations = JLanguageAssociations::getAssociations('com_${TM_COMPONENT/(.+)/\L\1/g}', '#__${TM_COMPONENT/(.+)/\L\1/g}${2:_plural}', 'com_${TM_COMPONENT/(.+)/\L\1/g}.item', \$${1/(.+)/\L\1/g}id))
+	if (\$associations = JLanguageAssociations::getAssociations('com_${TM_COMPONENT/(.+)/\L\1/g}', '#__${TM_COMPONENT/(.+)/\L\1/g}${2:_${TM_PLURAL/(.+)/\L\1/g}}', 'com_${TM_COMPONENT/(.+)/\L\1/g}.item', \$${1/(.+)/\L\1/g}id))
 	{
 		foreach (\$associations as \$tag => \$associated)
 		{

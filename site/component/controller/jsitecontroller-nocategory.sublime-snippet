@@ -28,7 +28,7 @@ class ${TM_COMPONENT/(.+)/\u\1/g}Controller extends JControllerLegacy
 		// Set the default view name and format from the Request.
 		// Note we are using ${TM_COMPONENT/(.)(.+)/\L\1/g}_id to avoid collisions with the router and the return page.
 		\$id       = \$this->input->getInt('${TM_COMPONENT/(.)(.+)/\L\1/g}_id');
-		\$vName    = \$this->input->get('view', '${1:plural}');
+		\$vName    = \$this->input->get('view', '${1:${TM_PLURAL/(.+)/\L\1/g}}');
 		\$this->input->set('view', \$vName);
 
 		if (\$user->get('id') || (\$this->input->getMethod() == 'POST' && \$vName = '${1/(.+)/\L\1/g}'))
@@ -52,7 +52,7 @@ class ${TM_COMPONENT/(.+)/\u\1/g}Controller extends JControllerLegacy
 		);
 
 		// Check for edit form.
-		if (\$vName == '${3:form}' && !\$this->checkEditId('com_${TM_COMPONENT/(.+)/\L\1/g}.edit.${2:singular}', \$id))
+		if (\$vName == '${3:form}' && !\$this->checkEditId('com_${TM_COMPONENT/(.+)/\L\1/g}.edit.${2:${TM_SINGULAR/(.+)/\L\1/g}}', \$id))
 		{
 			// Somehow the person just went to the form - we do not allow that.
 			return JError::raiseError(403, JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', \$id));

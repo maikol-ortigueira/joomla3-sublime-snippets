@@ -1,5 +1,5 @@
 <snippet>
-	<content><![CDATA[DROP TABLE IF EXISTS `#__${1:${TM_COMPONENT/(.+)/\L\1/g}}${2:_plural}`;]]></content>
+	<content><![CDATA[DROP TABLE IF EXISTS `#__${1:${TM_COMPONENT/(.+)/\L\1/g}}${2:_${TM_PLURAL/(.+)/\L\1/g}}`;]]></content>
 	<tabTrigger>jdb_drop</tabTrigger>
 	<scope>text.plain,source.sql</scope>
 </snippet>

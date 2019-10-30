@@ -1,5 +1,5 @@
 <snippet>
-	<content><![CDATA[MOD_${TM_COMPONENT/(.+)/\U\1/g}_CATEGORIES="${1:Component} - Categorias de ${2:Plural}"
+	<content><![CDATA[MOD_${TM_COMPONENT/(.+)/\U\1/g}_CATEGORIES="${1:Component} - Categorias de ${2:${TM_PLURAL/(.+)/\u\1/g}}"
 MOD_${TM_COMPONENT/(.+)/\U\1/g}_CATEGORIES_XML_DESCRIPTION="Este módulo exibe uma lista de categorias subordinadas a uma categoria superior."
 
 ; FIELD

@@ -100,7 +100,7 @@ class JFormField${1:${TM_FILENAME/(.*?)(\..+)/\u$1/}} extends JFormFieldCheckbox
 	protected function getOptions()
 	{
 		// Initialiase variables.
-		\$options = ${4:Plural}Helper::get${1/(.+)/\u\1/g}Options();
+		\$options = ${4:${TM_PLURAL/(.+)/\u\1/g}}Helper::get${1/(.+)/\u\1/g}Options();
 
 		// Merge any additional options in the XML definition.
 		\$options = array_merge(parent::getOptions(), \$options);

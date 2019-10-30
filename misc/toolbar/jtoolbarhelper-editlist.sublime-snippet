@@ -1,5 +1,5 @@
 <snippet>
-	<content><![CDATA[JToolbarHelper::editList('${1:singular}.edit');]]></content>
+	<content><![CDATA[JToolbarHelper::editList('${1:${TM_SINGULAR/(.+)/\L\1/g}}.edit');]]></content>
 	<tabTrigger>jtoolbarhelper-editlist</tabTrigger>
 	<scope>source.php</scope>
 </snippet>

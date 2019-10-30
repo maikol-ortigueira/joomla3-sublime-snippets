@@ -12,7 +12,7 @@ JHtml::_('formbehavior.chosen', 'select');
 \$userId    = \$user->get('id');
 \$listDirn  = \$this->escape(\$this->state->get('list.direction'));
 \$listOrder = \$this->escape(\$this->state->get('list.ordering'));
-\$canOrder  = \$user->authorise('core.edit.state', 'com_${1/(.+)/\L\1/g}.${3:singular}');
+\$canOrder  = \$user->authorise('core.edit.state', 'com_${1/(.+)/\L\1/g}.${3:${TM_SINGULAR/(.+)/\L\1/g}}');
 \$archived  = \$this->state->get('filter.state') == 2 ? true : false;
 \$trashed   = \$this->state->get('filter.state') == -2 ? true : false;
 \$saveOrder = \$listOrder == 'fp.ordering';

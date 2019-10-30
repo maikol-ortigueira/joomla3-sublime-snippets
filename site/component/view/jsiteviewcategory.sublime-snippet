@@ -63,7 +63,7 @@ class ${TM_COMPONENT/(.+)/\u\1/g}ViewCategory extends JViewCategory
 	 * @var    string
 	 * @since  $TM_VERSION
 	 */
-	protected \$viewName = '${1:singular}';
+	protected \$viewName = '${1:${TM_SINGULAR/(.+)/\L\1/g}}';
 
 	/**
 	 * Execute and display a template script.

@@ -6,9 +6,9 @@
  *
  * @since   \$TM_VERSION
  */
-public function get${1:Plural}()
+public function get${1:${TM_PLURAL/(.+)/\u\1/g}}()
 {
-	if (\$pk = \$this->getState('${2:singular}.id'))
+	if (\$pk = \$this->getState('${2:${TM_SINGULAR/(.+)/\L\1/g}}.id'))
 	{
 		// Initialiase variables.
 		\$db    = JFactory::getDbo();

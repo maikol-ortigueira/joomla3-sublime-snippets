@@ -46,7 +46,7 @@ class ${1/(.+)/\u\1/g}View${2:Featured} extends JViewLegacy
 
 			// Get row fulltext.
 			\$db = JFactory::getDbo();
-			\$query = 'SELECT' . \$db->quoteName('fulltext') . 'FROM #__${1/(.+)/\L\1/g}${3:_plural} WHERE id =' . \$row->id;
+			\$query = 'SELECT' . \$db->quoteName('fulltext') . 'FROM #__${1/(.+)/\L\1/g}${3:_${TM_PLURAL/(.+)/\L\1/g}} WHERE id =' . \$row->id;
 			\$db->setQuery(\$query);
 			\$row->fulltext = \$db->loadResult();
 

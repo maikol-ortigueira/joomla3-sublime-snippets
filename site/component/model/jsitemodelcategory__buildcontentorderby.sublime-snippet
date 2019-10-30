@@ -6,7 +6,7 @@
  *
  * @since   $TM_VERSION
  */
-protected function _build${1:Singular}OrderBy()
+protected function _build${1:${TM_SINGULAR/(.+)/\u\1/g}}OrderBy()
 {
 	// Initialiase variables.
 	\$app       = JFactory::getApplication('site');
@@ -32,7 +32,7 @@ protected function _build${1:Singular}OrderBy()
 		\$orderby .= \$db->escape(\$orderCol) . ' ' . \$db->escape(\$orderDirn) . ', ';
 	}
 
-	\$${2:singular}Orderby   = \$params->get('orderby_sec', 'rdate');
+	\$${2:${TM_SINGULAR/(.+)/\L\1/g}}Orderby   = \$params->get('orderby_sec', 'rdate');
 	\$${2/(.+)/\L\1/g}OrderDate = \$params->get('order_date');
 	\$categoryOrderby = \$params->def('orderby_pri', '');
 	\$secondary       = ${TM_COMPONENT/(.+)/\u\1/g}HelperQuery::orderbySecondary(\$${2/(.+)/\L\1/g}Orderby, \$${2/(.+)/\L\1/g}OrderDate) . ', ';

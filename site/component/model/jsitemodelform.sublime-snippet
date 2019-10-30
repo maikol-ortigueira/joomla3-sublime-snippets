@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[// Base this model on the backend version.
-require_once JPATH_ADMINISTRATOR . '/components/com_${TM_COMPONENT/(.+)/\L\1/g}/models/${2:singular}.php';
+require_once JPATH_ADMINISTRATOR . '/components/com_${TM_COMPONENT/(.+)/\L\1/g}/models/${2:${TM_SINGULAR/(.+)/\L\1/g}}.php';
 
 /**
  * ${TM_COMPONENT/(.+)/\u\1/g} Component ${2/(.+)/\u\1/g} Model.
@@ -168,7 +168,7 @@ class ${TM_COMPONENT/(.+)/\u\1/g}Model${1:${TM_FILENAME/(.*?)(\..+)/\u$1/}} exte
 		// Associations are not edited in frontend ATM so we have to inherit them.
 		if (JLanguageAssociations::isEnabled() && !empty(\$data['id']))
 		{
-			if (\$associations = JLanguageAssociations::getAssociations('com_${TM_COMPONENT/(.+)/\L\1/g}', '#__${TM_COMPONENT/(.+)/\L\1/g}${3:_plural}', 'com_${TM_COMPONENT/(.+)/\L\1/g}.item', \$data['id']))
+			if (\$associations = JLanguageAssociations::getAssociations('com_${TM_COMPONENT/(.+)/\L\1/g}', '#__${TM_COMPONENT/(.+)/\L\1/g}${3:_${TM_PLURAL/(.+)/\L\1/g}}', 'com_${TM_COMPONENT/(.+)/\L\1/g}.item', \$data['id']))
 			{
 				foreach (\$associations as \$tag => \$associated)
 				{

@@ -34,7 +34,7 @@ class PlgFinder${1:${TM_FILENAME/(.*?)(\..+)/\u$1/}} extends FinderIndexerAdapte
 	 * @var    string
 	 * @since  $TM_VERSION
 	 */
-	protected \$layout = '${2:singular}';
+	protected \$layout = '${2:${TM_SINGULAR/(.+)/\L\1/g}}';
 
 	/**
 	 * The type of content that the adapter indexes.

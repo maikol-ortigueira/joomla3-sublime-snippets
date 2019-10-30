@@ -19,7 +19,7 @@ if (count(\$this->children[\$this->category->id]) > 0 && \$this->maxLevel != 0):
 				<?php \$class = ''; ?>
 				<?php if (\$lang->isRTL()): ?>
 					<h3 class="page-header item-title">
-						<?php if ( \$this->params->get('show_cat_num_${1:plural}', 1)): ?>
+						<?php if ( \$this->params->get('show_cat_num_${1:${TM_PLURAL/(.+)/\L\1/g}}', 1)): ?>
 							<span class="badge badge-info tip hasTooltip" title="<?php echo JHtml::tooltipText('COM_${TM_COMPONENT/(.+)/\U\1/g}_NUM_ITEMS'); ?>">
 								<?php echo \$child->getNumItems(true); ?>
 							</span>

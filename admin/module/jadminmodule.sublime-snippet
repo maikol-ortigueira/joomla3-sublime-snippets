@@ -3,7 +3,7 @@
 require_once __DIR__ . '/helper.php';
 
 // Get module data.
-\$${2:plural} = Mod${1/(.+)/\u\1/g}Helper::get${2/(.+)/\u\1/g}(\$params);
+\$${2:${TM_PLURAL/(.+)/\L\1/g}} = Mod${1/(.+)/\u\1/g}Helper::get${2/(.+)/\u\1/g}(\$params);
 
 // Initialise variables.
 \$moduleclass_sfx = htmlspecialchars(\$params->get('moduleclass_sfx'));

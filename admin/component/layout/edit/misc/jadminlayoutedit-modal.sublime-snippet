@@ -50,7 +50,7 @@ if (isset(\$this->item->params['show_images_backend']) && \$this->item->params['
 ?>
 <script type="text/javascript">
 	Joomla.submitbutton = function(task) {
-		if (task == '${2:singular}.cancel' || document.formvalidator.isValid(document.id('item-form'))) {
+		if (task == '${2:${TM_SINGULAR/(.+)/\L\1/g}}.cancel' || document.formvalidator.isValid(document.id('item-form'))) {
 			<?php echo \$this->form->getField('description')->save(); ?>
 
 			if (window.opener && (task == '${2/(.+)/\L\1/g}.save' || task == '${2/(.+)/\L\1/g}.cancel')) {

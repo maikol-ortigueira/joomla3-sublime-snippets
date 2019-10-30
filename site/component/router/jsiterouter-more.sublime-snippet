@@ -50,7 +50,7 @@ function ${TM_COMPONENT/(.+)/\L\1/g}BuildRoute(& \$query)
 		return \$segments;
 	}
 
-	if (isset(\$view) and (\$view == '${2/(.+)/\L\1/g}' or \$view == '${3:singular}'))
+	if (isset(\$view) and (\$view == '${2/(.+)/\L\1/g}' or \$view == '${3:${TM_SINGULAR/(.+)/\L\1/g}}'))
 	{
 		if (\$mId != (int) \$query['id'] || \$mView != \$view)
 		{

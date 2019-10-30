@@ -65,7 +65,7 @@
 				for the file to be valid XML and be parsed by the installer.
 			-->
 			<menu
-				link="option=com_${1/(.+)/\L\1/g}&amp;view=${3:plural}"
+				link="option=com_${1/(.+)/\L\1/g}&amp;view=${3:${TM_PLURAL/(.+)/\L\1/g}}"
 				view="${3/(.+)/\L\1/g}"
 				img="class:${1/(.+)/\L\1/g}-${3/(.+)/\L\1/g}"
 				alt="${1/(.+)/\u\1/g}/${3/(.+)/\u\1/g}">com_${1/(.+)/\L\1/g}_${3/(.+)/\L\1/g}</menu>

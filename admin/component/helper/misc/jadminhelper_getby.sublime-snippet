@@ -9,7 +9,7 @@
  *
  * @since   $TM_VERSION
  */
-public static function get${1:Plural}By${2:Segment}(\$id, \$limit = 5)
+public static function get${1:${TM_PLURAL/(.+)/\u\1/g}}By${2:Segment}(\$id, \$limit = 5)
 {
 	// Initialiase variables.
 	\$db    = JFactory::getDbo();

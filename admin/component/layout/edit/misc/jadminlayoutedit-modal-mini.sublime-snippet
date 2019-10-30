@@ -32,7 +32,7 @@ if (isset(\$this->item->params['show_publishing_options']) && \$this->item->para
 ?>
 <script type="text/javascript">
 	Joomla.submitbutton = function(task) {
-		if (task == '${2:singular}.cancel' || document.formvalidator.isValid(document.id('item-form'))) {
+		if (task == '${2:${TM_SINGULAR/(.+)/\L\1/g}}.cancel' || document.formvalidator.isValid(document.id('item-form'))) {
 			if (window.opener && (task == '${2/(.+)/\L\1/g}.save' || task == '${2/(.+)/\L\1/g}.cancel')) {
 				window.opener.document.closeEditWindow = self;
 				window.opener.setTimeout('window.document.closeEditWindow.close()', 1000);

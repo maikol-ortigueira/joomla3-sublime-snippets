@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[/**
- * Method to set the ${1/(.+)/\L\1/g} ${2:singular}.
+ * Method to set the ${1/(.+)/\L\1/g} ${2:${TM_SINGULAR/(.+)/\L\1/g}}.
  *
  * @return  void
  *

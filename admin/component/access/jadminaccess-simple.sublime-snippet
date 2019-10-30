@@ -31,7 +31,7 @@
 			title="JACTION_EDITOWN"
 			description="JACTION_EDITOWN_COMPONENT_DESC" />
 	</section>
-	<section name="${2:singular}">
+	<section name="${2:${TM_SINGULAR/(.+)/\L\1/g}}">
 		<action
 			name="core.delete"
 			title="JACTION_DELETE"

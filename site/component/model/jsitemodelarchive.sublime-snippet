@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[// Load dependent classes.
-require_once __DIR__ . '/${2:plural}.php';
+require_once __DIR__ . '/${2:${TM_PLURAL/(.+)/\L\1/g}}.php';
 
 /**
  * ${TM_COMPONENT/(.+)/\u\1/g} Component ${1/(.+)/\u\1/g} Model.

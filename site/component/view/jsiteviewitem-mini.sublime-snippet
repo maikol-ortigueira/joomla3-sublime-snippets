@@ -7,7 +7,7 @@
  * @author      $TM_FULLNAME <$TM_EMAIL>
  * @since       $TM_VERSION
  */
-class ${TM_COMPONENT/(.+)/\u\1/g}View${1:Singular} extends JViewLegacy
+class ${TM_COMPONENT/(.+)/\u\1/g}View${1:${TM_SINGULAR/(.+)/\u\1/g}} extends JViewLegacy
 {
 	protected \$item;
 

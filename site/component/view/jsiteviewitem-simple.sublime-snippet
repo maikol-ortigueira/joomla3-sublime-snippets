@@ -6,7 +6,7 @@
  * @subpackage  com_${TM_COMPONENT/(.+)/\L\1/g}
  * @since       $TM_VERSION
  */
-class ${TM_COMPONENT/(.+)/\u\1/g}View${1:Singular} extends JViewLegacy
+class ${TM_COMPONENT/(.+)/\u\1/g}View${1:${TM_SINGULAR/(.+)/\u\1/g}} extends JViewLegacy
 {
 	/**
 	 * A list of user note objects.

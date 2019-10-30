@@ -17,7 +17,7 @@ public function batch(\$model = null)
 	\$model = \$this->getModel('${1/(.+)/\u\1/g}', '${TM_COMPONENT/(.+)/\u\1/g}Model', array());
 
 	// Preset the redirect.
-	\$this->setRedirect(JRoute::_('index.php?option=com_${TM_COMPONENT/(.+)/\L\1/g}&view=${1:singular}' . \$this->getRedirectToListAppend(), false));
+	\$this->setRedirect(JRoute::_('index.php?option=com_${TM_COMPONENT/(.+)/\L\1/g}&view=${1:${TM_SINGULAR/(.+)/\L\1/g}}' . \$this->getRedirectToListAppend(), false));
 
 	return parent::batch(\$model);
 }]]></content>

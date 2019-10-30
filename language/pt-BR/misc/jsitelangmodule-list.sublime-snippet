@@ -1,8 +1,8 @@
 <snippet>
 	<content><![CDATA[; FIELD
 
-MOD_${TM_MODULE/(.+)/\U\1/g}_FIELD_CATEGORY_DESC="Selecione ${3:plural} de uma, ou mais categorias. Se nenhuma seleção for feita, exibirá por padrão todas as categorias."
-MOD_${TM_MODULE/(.+)/\U\1/g}_FIELD_IMAGES_DESC="Exibir imagens no ${4:singular}."
+MOD_${TM_MODULE/(.+)/\U\1/g}_FIELD_CATEGORY_DESC="Selecione ${3:${TM_PLURAL/(.+)/\L\1/g}} de uma, ou mais categorias. Se nenhuma seleção for feita, exibirá por padrão todas as categorias."
+MOD_${TM_MODULE/(.+)/\U\1/g}_FIELD_IMAGES_DESC="Exibir imagens no ${4:${TM_SINGULAR/(.+)/\L\1/g}}."
 MOD_${TM_MODULE/(.+)/\U\1/g}_FIELD_IMAGES_LABEL="Exibir Imagens"
 MOD_${TM_MODULE/(.+)/\U\1/g}_FIELD_${1:TITLE}_DESC="Exibir/Ocultar títulos de ${3/(.+)/\L\1/g}."
 MOD_${TM_MODULE/(.+)/\U\1/g}_FIELD_${1/(.+)/\U\1/g}_LABEL="Exibir Títulos do ${3/(.+)/\u\1/g}"

@@ -5,7 +5,7 @@
  * @var     string
  * @since   $TM_VERSION
  */
-protected \$view_item = '${1:singular}';]]></content>
+protected \$view_item = '${1:${TM_SINGULAR/(.+)/\L\1/g}}';]]></content>
 	<tabTrigger>jadmincontrolleredit_view_item</tabTrigger>
 	<scope>source.php</scope>
 </snippet>

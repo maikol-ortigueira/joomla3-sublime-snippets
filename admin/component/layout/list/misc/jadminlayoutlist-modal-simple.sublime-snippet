@@ -25,7 +25,7 @@ JHtml::_('behavior.framework', true);
 \$listOrder = \$this->escape(\$this->state->get('list.ordering'));
 \$listDirn  = \$this->escape(\$this->state->get('list.direction'));
 ?>
-<form action="<?php echo JRoute::_('index.php?option=com_${1:${TM_COMPONENT/(.+)/\L\1/g}}&view=${2:plural}&layout=modal&tmpl=component&function=' . \$function . '&' . JSession::getFormToken() . '=1'); ?>" method="post" name="adminForm" id="adminForm" class="form-inline">
+<form action="<?php echo JRoute::_('index.php?option=com_${1:${TM_COMPONENT/(.+)/\L\1/g}}&view=${2:${TM_PLURAL/(.+)/\L\1/g}}&layout=modal&tmpl=component&function=' . \$function . '&' . JSession::getFormToken() . '=1'); ?>" method="post" name="adminForm" id="adminForm" class="form-inline">
 	<fieldset class="filter clearfix">
 		<div class="btn-toolbar">
 			<div class="btn-group pull-left">

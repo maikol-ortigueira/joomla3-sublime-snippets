@@ -2,7 +2,7 @@
 	<content><![CDATA[JFormHelper::loadFieldClass('ordering');
 
 /**
- * Supports an HTML select list of ${2:plural}.
+ * Supports an HTML select list of ${2:${TM_PLURAL/(.+)/\L\1/g}}.
  *
  * @package     ${TM_COMPONENT/(.+)/\u\1/g}
  * @subpackage  com_${TM_COMPONENT/(.+)/\L\1/g}

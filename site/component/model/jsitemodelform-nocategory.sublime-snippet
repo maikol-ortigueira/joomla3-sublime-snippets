@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[// Base this model on the backend version.
-require_once JPATH_ADMINISTRATOR . '/components/com_${TM_COMPONENT/(.+)/\L\1/g}/models/${2:singular}.php';
+require_once JPATH_ADMINISTRATOR . '/components/com_${TM_COMPONENT/(.+)/\L\1/g}/models/${2:${TM_SINGULAR/(.+)/\L\1/g}}.php';
 
 /**
  * ${TM_COMPONENT/(.+)/\u\1/g} Component ${2/(.+)/\u\1/g} Model.

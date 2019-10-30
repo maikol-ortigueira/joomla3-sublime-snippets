@@ -1,5 +1,5 @@
 <snippet>
-	<content><![CDATA[JToolbarHelper::addNew('${1:singular}.add');]]></content>
+	<content><![CDATA[JToolbarHelper::addNew('${1:${TM_SINGULAR/(.+)/\L\1/g}}.add');]]></content>
 	<tabTrigger>jtoolbarhelper-addnew</tabTrigger>
 	<scope>source.php</scope>
 </snippet>

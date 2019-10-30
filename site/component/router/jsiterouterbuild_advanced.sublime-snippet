@@ -1,5 +1,5 @@
 <snippet>
-	<content><![CDATA[if (isset(\$view) and \$view == '${1:singular}')
+	<content><![CDATA[if (isset(\$view) and \$view == '${1:${TM_SINGULAR/(.+)/\L\1/g}}')
 {
 	if (\$mId != (int) \$query['id'] || \$mView != \$view)
 	{

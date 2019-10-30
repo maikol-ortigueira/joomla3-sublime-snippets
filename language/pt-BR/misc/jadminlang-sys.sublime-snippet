@@ -4,7 +4,7 @@ COM_${1/(.+)/\U\1/g}_XML_DESCRIPTION="Componente para gerenciamento de ${2/(.+)/
 
 ; MENU
 
-COM_${1/(.+)/\U\1/g}_${3:PLURAL}="${4:Plural}"
+COM_${1/(.+)/\U\1/g}_${3:${TM_PLURAL/(.+)/\U\1/g}}="${4:${TM_PLURAL/(.+)/\u\1/g}}"
 COM_${1/(.+)/\U\1/g}_CATEGORIES="Categorias"
 COM_${1/(.+)/\U\1/g}_FEATURED="${4/(.+)/\u\1/g} em Destaque"
 

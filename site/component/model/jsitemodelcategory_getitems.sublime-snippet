@@ -13,7 +13,7 @@ function getItems()
 
 	if (\$this->_${1/(.+)/\L\1/g} === null && \$category = \$this->getCategory())
 	{
-		\$model = JModelLegacy::getInstance('${1:Plural}', 'ContentModel', array('ignore_request' => true));
+		\$model = JModelLegacy::getInstance('${1:${TM_PLURAL/(.+)/\u\1/g}}', 'ContentModel', array('ignore_request' => true));
 		\$model->setState('params', JFactory::getApplication()->getParams());
 		\$model->setState('filter.category_id', \$category->id);
 		\$model->setState('filter.state', \$this->getState('filter.state'));

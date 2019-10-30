@@ -7,7 +7,7 @@
  * @author      $TM_FULLNAME <$TM_EMAIL>
  * @since       $TM_VERSION
  */
-class ${1:${TM_COMPONENT/(.+)/\u\1/g}}View${2:Plural} extends JViewLegacy
+class ${1:${TM_COMPONENT/(.+)/\u\1/g}}View${2:${TM_PLURAL/(.+)/\u\1/g}} extends JViewLegacy
 {
 	/**
 	 * List of update items.

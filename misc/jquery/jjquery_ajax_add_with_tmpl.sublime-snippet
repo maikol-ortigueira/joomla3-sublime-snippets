@@ -8,7 +8,7 @@
 
 	if (search && ${2/(.+)/\L\1/g}_id) {
 		\$.ajax({
-			url: 'index.php?option=com_${TM_COMPONENT/(.+)/\L\1/g}&task=${1:controller}.add${2:Singular}Ajax&format=json',
+			url: 'index.php?option=com_${TM_COMPONENT/(.+)/\L\1/g}&task=${1:controller}.add${2:${TM_SINGULAR/(.+)/\u\1/g}}Ajax&format=json',
 			type: 'POST',
 			data: {
 				${1/(.+)/\L\1/g}_id: '<?php echo \$this->item->id; ?>',
@@ -21,7 +21,7 @@
 					return false;
 				}
 
-				\$("#${3:plural}_list").tmpl(data, {
+				\$("#${3:${TM_PLURAL/(.+)/\L\1/g}}_list").tmpl(data, {
 					returnPage: function() {
 						return '<?php echo \$return; ?>';
 					}

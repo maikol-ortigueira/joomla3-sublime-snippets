@@ -1,6 +1,6 @@
 <snippet>
-	<content><![CDATA[CREATE TABLE `${1:$TM_PREFIX}_${2:${TM_COMPONENT/(.+)/\L\1/g}}${3:_plural}_frontpage` (
-  `${4:singular}_id` int(11) NOT NULL DEFAULT '0',
+	<content><![CDATA[CREATE TABLE `${1:$TM_PREFIX}_${2:${TM_COMPONENT/(.+)/\L\1/g}}${3:_${TM_PLURAL/(.+)/\L\1/g}}_frontpage` (
+  `${4:${TM_SINGULAR/(.+)/\L\1/g}}_id` int(11) NOT NULL DEFAULT '0',
   `ordering` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`${4/(.+)/\L\1/g}_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;]]></content>

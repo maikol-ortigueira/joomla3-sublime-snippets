@@ -11,7 +11,7 @@ JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
 			<div class="page-header">
 				<h2>
 					<?php if (\$params->get('link_titles')): ?>
-						<a href="<?php echo JRoute::_(${TM_COMPONENT/(.+)/\u\1/g}HelperRoute::get${1:Singular}Route(\$item->slug, \$item->catslug)); ?>"><?php echo \$this->escape(\$item->${2/(.+)/\L\1/g}); ?></a>
+						<a href="<?php echo JRoute::_(${TM_COMPONENT/(.+)/\u\1/g}HelperRoute::get${1:${TM_SINGULAR/(.+)/\u\1/g}}Route(\$item->slug, \$item->catslug)); ?>"><?php echo \$this->escape(\$item->${2/(.+)/\L\1/g}); ?></a>
 					<?php else: ?>
 						<?php echo \$this->escape(\$item->${2:title}); ?>
 					<?php endif; ?>

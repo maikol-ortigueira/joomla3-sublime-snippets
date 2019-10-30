@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[/**
- * Save user vote on ${1:singular}.
+ * Save user vote on ${1:${TM_SINGULAR/(.+)/\L\1/g}}.
  *
  * @param   integer  \$pk    The ${1/(.+)/\L\1/g} id.
  * @param   integer  \$rate  Voting rate.

@@ -95,7 +95,7 @@ protected function populateState(\$ordering = null, \$direction = null)
 	// Set limit for query. If list, use parameter. If blog, add blog parameters for limit.
 	if ((\$app->input->get('layout') == 'blog') || \$params->get('layout_type') == 'blog')
 	{
-		\$limit = \$params->get('num_leading_${1:plural}') + \$params->get('num_intro_${1/(.+)/\L\1/g}') + \$params->get('num_links');
+		\$limit = \$params->get('num_leading_${1:${TM_PLURAL/(.+)/\L\1/g}}') + \$params->get('num_intro_${1/(.+)/\L\1/g}') + \$params->get('num_links');
 		\$this->setState('list.links', \$params->get('num_links'));
 	}
 	else

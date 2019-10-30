@@ -11,7 +11,7 @@ if (\$this->item->state == 0): ?>
 <?php if (\$params->get('show_title')): ?>
 	<h2 class="item-title">
 		<?php if (\$params->get('link_titles') && \$params->get('access-view')): ?>
-			<a href="<?php echo JRoute::_(${TM_COMPONENT/(.+)/\u\1/g}HelperRoute::get${1:Singular}Route(\$this->item->slug, \$this->item->catid)); ?>"><?php echo \$this->escape(\$this->item->title); ?></a>
+			<a href="<?php echo JRoute::_(${TM_COMPONENT/(.+)/\u\1/g}HelperRoute::get${1:${TM_SINGULAR/(.+)/\u\1/g}}Route(\$this->item->slug, \$this->item->catid)); ?>"><?php echo \$this->escape(\$this->item->title); ?></a>
 		<?php else: ?>
 			<?php echo \$this->escape(\$this->item->title); ?>
 		<?php endif; ?>

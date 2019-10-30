@@ -1,5 +1,5 @@
 <snippet>
-	<content><![CDATA[JToolbarHelper::checkin('${1:plural}.checkin');]]></content>
+	<content><![CDATA[JToolbarHelper::checkin('${1:${TM_PLURAL/(.+)/\L\1/g}}.checkin');]]></content>
 	<tabTrigger>jtoolbarhelper-checkin</tabTrigger>
 	<scope>source.php</scope>
 </snippet>

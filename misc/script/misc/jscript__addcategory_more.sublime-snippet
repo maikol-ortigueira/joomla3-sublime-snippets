@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[\$data2 = (array) \$data;
-\$data2['extension'] = 'com_${TM_COMPONENT/(.+)/\L\1/g}.${1:plural}';
+\$data2['extension'] = 'com_${TM_COMPONENT/(.+)/\L\1/g}.${1:${TM_PLURAL/(.+)/\L\1/g}}';
 
 // Save the data.
 \$model->save(\$data2);
@@ -10,7 +10,7 @@
 
 // Updating all albums without category to have this new one.
 \$query->clear()
-	->update(\$db->quoteName('#__${TM_COMPONENT/(.+)/\L\1/g}${2:_plural}_${1/(.+)/\L\1/g}'))
+	->update(\$db->quoteName('#__${TM_COMPONENT/(.+)/\L\1/g}${2:_${TM_PLURAL/(.+)/\L\1/g}}_${1/(.+)/\L\1/g}'))
 	->set(\$db->quoteName('catid') . ' = ' . \$db->quote((int) \$id))
 	->where(\$db->quoteName('catid') . ' = ' . \$db->quote(0));
 

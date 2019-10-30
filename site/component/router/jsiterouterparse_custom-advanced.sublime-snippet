@@ -1,5 +1,5 @@
 <snippet>
-	<content><![CDATA[case '${1:singular}':
+	<content><![CDATA[case '${1:${TM_SINGULAR/(.+)/\L\1/g}}':
 	if (isset(\$segments[1]))
 	{
 		if (\$advanced)

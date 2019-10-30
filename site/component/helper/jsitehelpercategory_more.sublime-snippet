@@ -8,7 +8,7 @@
  * @author      $TM_FULLNAME <$TM_EMAIL>
  * @since       $TM_VERSION
  */
-class ${TM_COMPONENT/(.+)/\u\1/g}${1:Plural}Categories extends JCategories
+class ${TM_COMPONENT/(.+)/\u\1/g}${1:${TM_PLURAL/(.+)/\u\1/g}}Categories extends JCategories
 {
 	/**
 	 * Class constructor.

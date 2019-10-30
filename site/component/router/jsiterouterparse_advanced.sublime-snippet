@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[
-case '${1:plural}':
+case '${1:${TM_PLURAL/(.+)/\L\1/g}}':
 	if (\$advanced)
 	{
 		\$db = JFactory::getDbo();

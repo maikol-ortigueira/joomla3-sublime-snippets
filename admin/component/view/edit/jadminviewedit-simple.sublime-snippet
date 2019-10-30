@@ -7,7 +7,7 @@
  * @author      $TM_FULLNAME <$TM_EMAIL>
  * @since       $TM_VERSION
  */
-class ${1/(.+)/\u\1/g}View${2:Singular} extends JViewLegacy
+class ${1/(.+)/\u\1/g}View${2:${TM_SINGULAR/(.+)/\u\1/g}} extends JViewLegacy
 {
 	/**
 	 * The form to use for the view.

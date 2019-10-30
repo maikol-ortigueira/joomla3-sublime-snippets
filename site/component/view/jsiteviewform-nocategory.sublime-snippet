@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[/**
- * HTML ${2:Singular} View class for the ${TM_COMPONENT/(.+)/\u\1/g} component.
+ * HTML ${2:${TM_SINGULAR/(.+)/\u\1/g}} View class for the ${TM_COMPONENT/(.+)/\u\1/g} component.
  *
  * @package     ${TM_COMPONENT/(.+)/\u\1/g}
  * @subpackage  com_${TM_COMPONENT/(.+)/\L\1/g}

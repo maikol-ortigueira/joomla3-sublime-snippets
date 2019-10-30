@@ -1,5 +1,5 @@
 <snippet>
-	<content><![CDATA[JToolbarHelper::trash('${1:plural}.trash');]]></content>
+	<content><![CDATA[JToolbarHelper::trash('${1:${TM_PLURAL/(.+)/\L\1/g}}.trash');]]></content>
 	<tabTrigger>jtoolbarhelper-trash</tabTrigger>
 	<scope>source.php</scope>
 </snippet>

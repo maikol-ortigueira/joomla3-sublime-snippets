@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[// Load the submenu.
-${TM_COMPONENT/(.+)/\u\1/g}Helper::addSubmenu('${1:plural}');]]></content>
+${TM_COMPONENT/(.+)/\u\1/g}Helper::addSubmenu('${1:${TM_PLURAL/(.+)/\L\1/g}}');]]></content>
 	<tabTrigger>jloadsubmenu</tabTrigger>
 	<scope>source.php</scope>
 </snippet>

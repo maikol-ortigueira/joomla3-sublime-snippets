@@ -23,7 +23,7 @@ class ${TM_COMPONENT/(.+)/\u\1/g}Controller${1:${TM_FILENAME/(.*?)(\..+)/\u$1/}}
 	 * @var     string
 	 * @since   $TM_VERSION
 	 */
-	protected \$view_list = '${3:plural}';
+	protected \$view_list = '${3:${TM_PLURAL/(.+)/\L\1/g}}';
 
 	/**
 	 * The URL edit variable.

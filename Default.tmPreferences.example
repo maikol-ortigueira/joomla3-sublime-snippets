@@ -73,6 +73,18 @@
 			</dict>
 			<dict>
 				<key>name</key>
+				<string>TM_PLURAL</string>
+				<key>value</key>
+				<string><![CDATA[views]]></string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>TM_SINGULAR</string>
+				<key>value</key>
+				<string><![CDATA[view]]></string>
+			</dict>
+			<dict>
+				<key>name</key>
 				<string>TM_LANGUAGE</string>
 				<key>value</key>
 				<string><![CDATA[en-GB]]></string>

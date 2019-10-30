@@ -15,7 +15,7 @@ COM_${TM_COMPONENT/(.+)/\U\1/g}_BATCH_TIP="Se escolher copiar uma ${2:${1/(.+)(s
 
 ; CHANGE
 
-COM_${TM_COMPONENT/(.+)/\U\1/g}_CHANGE_${3:SINGULAR}="Alterar ${5:${2/(.+)/\u\1/g}}"
+COM_${TM_COMPONENT/(.+)/\U\1/g}_CHANGE_${3:${TM_SINGULAR/(.+)/\U\1/g}}="Alterar ${5:${2/(.+)/\u\1/g}}"
 
 ; CONFIG
 

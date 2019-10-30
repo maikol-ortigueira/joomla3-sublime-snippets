@@ -54,7 +54,7 @@ protected function prepareTable(\$table)
 	// Increment the content version number.
 	\$table->version++;
 
-	// Reorder the ${3:plural} within the category so the new ${4:singular} is first.
+	// Reorder the ${3:${TM_PLURAL/(.+)/\L\1/g}} within the category so the new ${4:${TM_SINGULAR/(.+)/\L\1/g}} is first.
 	if (empty(\$table->id))
 	{
 		\$table->reorder('catid = ' . (int) \$table->catid . ' AND state >= 0');

@@ -1,5 +1,5 @@
 <snippet>
-	<content><![CDATA[<section name="${2:singular}">
+	<content><![CDATA[<section name="${2:${TM_SINGULAR/(.+)/\L\1/g}}">
 	<action
 		name="core.delete"
 		title="JACTION_DELETE"

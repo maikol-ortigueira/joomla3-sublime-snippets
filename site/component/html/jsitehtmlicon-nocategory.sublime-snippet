@@ -26,7 +26,7 @@ abstract class JHtml${1:${TM_FILENAME/(.*?)(\..+)/\u$1/}}
 
 		// Get the full current URI.
 		\$uri = JUri::getInstance();
-		\$url = 'index.php?option=com_${TM_COMPONENT/(.+)/\L\1/g}&task=${2:singular}.add&return=' . base64_encode(\$uri) . '&${TM_COMPONENT/(.)(.+)/\L\1/g}_id=0';
+		\$url = 'index.php?option=com_${TM_COMPONENT/(.+)/\L\1/g}&task=${2:${TM_SINGULAR/(.+)/\L\1/g}}.add&return=' . base64_encode(\$uri) . '&${TM_COMPONENT/(.)(.+)/\L\1/g}_id=0';
 
 		if (\$params->get('show_icons'))
 		{

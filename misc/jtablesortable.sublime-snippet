@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[<?php
-\$saveOrderingUrl = 'index.php?option=com_${TM_COMPONENT/(.+)/\L\1/g}&task=${1:plural}.saveOrderAjax&tmpl=component';
+\$saveOrderingUrl = 'index.php?option=com_${TM_COMPONENT/(.+)/\L\1/g}&task=${1:${TM_PLURAL/(.+)/\L\1/g}}.saveOrderAjax&tmpl=component';
 JHtml::_('sortablelist.sortable', '${2:sigular}List', '${3:item}-form', 'asc', \$saveOrderingUrl);
 ?>
 <?php if (\$this->${1/(.+)/\L\1/g}): ?>

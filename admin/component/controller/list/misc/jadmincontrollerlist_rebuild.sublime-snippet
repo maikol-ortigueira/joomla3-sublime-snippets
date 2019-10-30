@@ -12,7 +12,7 @@ public function ${1:rebuild}()
 	JSession::checkToken() or die(JText::_('JINVALID_TOKEN'));
 
 	\$extension = \$this->input->get('extension');
-	\$this->setRedirect(JRoute::_('index.php?option=com_${TM_COMPONENT/(.+)/\L\1/g}&view=${2:plural}', false));
+	\$this->setRedirect(JRoute::_('index.php?option=com_${TM_COMPONENT/(.+)/\L\1/g}&view=${2:${TM_PLURAL/(.+)/\L\1/g}}', false));
 
 	\$model = \$this->getModel();
 

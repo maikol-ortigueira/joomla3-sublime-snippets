@@ -1,5 +1,5 @@
 <snippet>
-	<content><![CDATA[if (\$table->load(array('type_alias' => 'com_${TM_COMPONENT/(.+)/\L\1/g}.${1:singular}')))
+	<content><![CDATA[if (\$table->load(array('type_alias' => 'com_${TM_COMPONENT/(.+)/\L\1/g}.${1:${TM_SINGULAR/(.+)/\L\1/g}}')))
 {
 	\$table->delete();
 }]]></content>

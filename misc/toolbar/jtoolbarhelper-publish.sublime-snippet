@@ -1,5 +1,5 @@
 <snippet>
-	<content><![CDATA[JToolbarHelper::publish('${1:plural}.publish', 'JTOOLBAR_PUBLISH', true);]]></content>
+	<content><![CDATA[JToolbarHelper::publish('${1:${TM_PLURAL/(.+)/\L\1/g}}.publish', 'JTOOLBAR_PUBLISH', true);]]></content>
 	<tabTrigger>jtoolbarhelper-publish</tabTrigger>
 	<scope>source.php</scope>
 </snippet>

@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[// Load dependent classes.
-require_once __DIR__ . '/${2:singular}.php';
+require_once __DIR__ . '/${2:${TM_SINGULAR/(.+)/\L\1/g}}.php';
 
 /**
  * ${1/(.+)/\u\1/g} model.

@@ -7,7 +7,7 @@
  * @author      $TM_FULLNAME <$TM_EMAIL>
  * @since       $TM_VERSION
  */
-class ${TM_COMPONENT/(.+)/\u\1/g}View${1:Plural} extends JViewLegacy
+class ${TM_COMPONENT/(.+)/\u\1/g}View${1:${TM_PLURAL/(.+)/\u\1/g}} extends JViewLegacy
 {
 	/**
 	 * Model state object.

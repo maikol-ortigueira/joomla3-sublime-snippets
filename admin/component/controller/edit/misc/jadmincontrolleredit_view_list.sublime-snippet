@@ -5,7 +5,7 @@
  * @var     string
  * @since   $TM_VERSION
  */
-protected \$view_list = '${1:plural}';]]></content>
+protected \$view_list = '${1:${TM_PLURAL/(.+)/\L\1/g}}';]]></content>
 	<tabTrigger>jadmincontrolleredit_view_list</tabTrigger>
 	<scope>source.php</scope>
 </snippet>
