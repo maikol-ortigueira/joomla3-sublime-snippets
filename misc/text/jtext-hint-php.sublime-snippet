@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+COM_${TM_COMPONENT/(.+)/\U\1/g}_${1/(.+)/\U\1/g}_HINT
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>jtext-hint</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+</snippet>
