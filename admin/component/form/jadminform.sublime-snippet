@@ -49,7 +49,7 @@
 			filter="JComponentHelper::filterText"
 			buttons="true" />
 		<field
-			name="state"
+			name="published"
 			type="list"
 			class="chzn-color-state"
 			label="JSTATUS"

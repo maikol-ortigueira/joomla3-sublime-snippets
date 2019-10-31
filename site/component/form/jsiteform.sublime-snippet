@@ -53,12 +53,12 @@
 			filter="JComponentHelper::filterText"
 			asset_id="com_${TM_COMPONENT/(.+)/\L\1/g}" />
 		<field
-			name="state"
+			name="published"
 			type="list"
 			class="inputbox"
 			label="JSTATUS"
 			description="JFIELD_PUBLISHED_DESC"
-			id="state"
+			id="published"
 			size="1"
 			default="1">
 			<option value="1">JPUBLISHED</option>

@@ -17,7 +17,7 @@ public static function get${1:${TM_PLURAL/(.+)/\u\1/g}}(& \$params)
 	// Prepare query.
 	\$query->select('a.*')
 		->from(\$db->quoteName('#__${TM_COMPONENT/(.+)/\L\1/g}_${1/(.+)/\L\1/g}') . ' AS a')
-		->where(\$db->quoteName('a.state') . ' = ' . \$db->quote('1'))
+		->where(\$db->quoteName('a.published') . ' = ' . \$db->quote('1'))
 		->order(\$db->quoteName('a.ordering') . ' ASC');
 
 	// Inject the query and load the items.

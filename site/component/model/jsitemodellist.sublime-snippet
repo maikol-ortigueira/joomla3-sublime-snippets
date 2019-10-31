@@ -27,7 +27,7 @@ class ${TM_COMPONENT/(.+)/\u\1/g}Model${1:${TM_FILENAME/(.*?)(\..+)/\u$1/}} exte
 				'checked_out', 'a.checked_out',
 				'checked_out_time', 'a.checked_out_time',
 				'catid', 'a.catid', 'category_title',
-				'state', 'a.state',
+				'published', 'a.published',
 				'access', 'a.access', 'access_level',
 				'created', 'a.created',
 				'created_by', 'a.created_by',
@@ -188,7 +188,7 @@ class ${TM_COMPONENT/(.+)/\u\1/g}Model${1:${TM_FILENAME/(.*?)(\..+)/\u$1/}} exte
 		{
 			// If badcats is not null, this means that the ${4/(.+)/\L\1/g} is inside an archived category.
 			// In this case, the state is set to 2 to indicate Archived (even if the ${4/(.+)/\L\1/g} state is Published).
-			\$query->select(\$this->getState('list.select', 'CASE WHEN badcats.id is null THEN a.state ELSE 2 END AS state'));
+			\$query->select(\$this->getState('list.select', 'CASE WHEN badcats.id is null THEN a.published ELSE 2 END AS published'));
 		}
 		else
 		{
@@ -197,7 +197,7 @@ class ${TM_COMPONENT/(.+)/\u\1/g}Model${1:${TM_FILENAME/(.*?)(\..+)/\u$1/}} exte
 			If badcats is not null, this means that the ${4/(.+)/\L\1/g} is inside an unpublished category.
 			In this case, the state is set to 0 to indicate Unpublished (even if the ${4/(.+)/\L\1/g} state is Published).
 			*/
-			\$query->select(\$this->getState('list.select', 'CASE WHEN badcats.id is not null THEN 0 ELSE a.state END AS state'));
+			\$query->select(\$this->getState('list.select', 'CASE WHEN badcats.id is not null THEN 0 ELSE a.published END AS published'));
 		}
 
 		\$query->from('#__${TM_COMPONENT/(.+)/\L\1/g}${3:_${1/(.+)/\L\1/g}} AS a');
@@ -250,7 +250,7 @@ class ${TM_COMPONENT/(.+)/\u\1/g}Model${1:${TM_FILENAME/(.*?)(\..+)/\u$1/}} exte
 			\$subquery .= ' AND parent.published = 2 GROUP BY cat.id ';
 
 			// Set effective state to archived if up-path category is archived.
-			\$publishedWhere = 'CASE WHEN badcats.id is null THEN a.state ELSE 2 END';
+			\$publishedWhere = 'CASE WHEN badcats.id is null THEN a.published ELSE 2 END';
 		}
 		else
 		{
@@ -259,7 +259,7 @@ class ${TM_COMPONENT/(.+)/\u\1/g}Model${1:${TM_FILENAME/(.*?)(\..+)/\u$1/}} exte
 			\$subquery .= ' AND parent.published != 1 GROUP BY cat.id ';
 
 			// Select state to unpublished if up-path category is unpublished.
-			\$publishedWhere = 'CASE WHEN badcats.id is null THEN a.state ELSE 0 END';
+			\$publishedWhere = 'CASE WHEN badcats.id is null THEN a.published ELSE 0 END';
 		}
 
 		\$query->join('LEFT OUTER', '(' . \$subquery . ') AS badcats ON badcats.id = c.id');

@@ -43,7 +43,7 @@ public function &getItem(\$pk = null)
 
 			if (is_numeric(\$published))
 			{
-				\$query->where('(a.state = ' . (int) \$published . ' OR a.state =' . (int) \$archived . ')')
+				\$query->where('(a.published = ' . (int) \$published . ' OR a.published =' . (int) \$archived . ')')
 					->where('(a.publish_up = ' . \$nullDate . ' OR a.publish_up <= ' . \$nowDate . ')')
 					->where('(a.publish_down = ' . \$nullDate . ' OR a.publish_down >= ' . \$nowDate . ')');
 			}
@@ -58,7 +58,7 @@ public function &getItem(\$pk = null)
 			}
 
 			// Check for published state if filter set.
-			if (((is_numeric(\$published)) || (is_numeric(\$archived))) && ((\$data->state != \$published) && (\$data->state != \$archived)))
+			if (((is_numeric(\$published)) || (is_numeric(\$archived))) && ((\$data->published != \$published) && (\$data->published != \$archived)))
 			{
 				JError::raiseError(404, JText::_('COM_${TM_COMPONENT/(.+)/\U\1/g}_ERROR_${1/(.+)/\U\1/g}_NOT_FOUND'));
 			}

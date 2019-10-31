@@ -15,7 +15,7 @@ $trashed  = $this->state->get('filter.state') == -2 ? true : false;
 		JHtml::_('dropdown.edit', $item->id, '${1:${TM_SINGULAR/(.+)/\L\1/g}}.');
 		JHtml::_('dropdown.divider');
 
-		if ($item->state):
+		if ($item->published):
 			JHtml::_('dropdown.unpublish', 'cb' . $i, '${2:${TM_PLURAL/(.+)/\L\1/g}}.');
 		else :
 			JHtml::_('dropdown.publish', 'cb' . $i, '${2/(.+)/\L\1/g}.');

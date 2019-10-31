@@ -18,7 +18,7 @@ public function __construct(\$config = array())
 			'checked_out', 'a.checked_out',
 			'checked_out_time', 'a.checked_out_time',
 			'catid', 'a.catid', 'category_title',
-			'state', 'a.state',
+			'published', 'a.published',
 			'access', 'a.access', 'access_level',
 			'created', 'a.created',
 			'created_by', 'a.created_by',

@@ -6,7 +6,7 @@
 \$data = array(
 	'id'       => 0,
 	'title'    => 'Title',
-	'state'    => 1,
+	'published'    => 1,
 	'ordering' => 0
 );
 

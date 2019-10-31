@@ -279,7 +279,7 @@ class PlgFinder${1:${TM_FILENAME/(.*?)(\..+)/\u$1/}} extends FinderIndexerAdapte
 		\$item->addInstruction(FinderIndexer::META_CONTEXT, 'created_by_alias');
 
 		// Translate the state. ${3/(.+)/\u\1/g} should only be published if the category is published.
-		\$item->state = \$this->translateState(\$item->state, \$item->cat_state);
+		\$item->published = \$this->translateState(\$item->published, \$item->cat_state);
 
 		// Add the type taxonomy data.
 		\$item->addTaxonomy('Type', '${2/(.+)/\u\1/g}');
@@ -335,7 +335,7 @@ class PlgFinder${1:${TM_FILENAME/(.*?)(\..+)/\u$1/}} extends FinderIndexerAdapte
 		// Check if we can use the supplied SQL query.
 		\$query = \$query instanceof JDatabaseQuery ? \$query : \$db->getQuery(true)
 			->select('a.id, a.${4:title}, a.alias, a.description AS summary')
-			->select('a.state, a.catid, a.created AS start_date, a.created_by')
+			->select('a.published, a.catid, a.created AS start_date, a.created_by')
 			->select('a.created_by_alias, a.modified, a.modified_by, a.params')
 			->select('a.metakey, a.metadesc, a.metadata, a.language, a.access, a.version, a.ordering')
 			->select('a.publish_up AS publish_start_date, a.publish_down AS publish_end_date')

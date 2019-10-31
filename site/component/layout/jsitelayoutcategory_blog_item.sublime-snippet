@@ -10,10 +10,10 @@ JHtml::addIncludePath(JPATH_COMPONENT . '/helpers/html');
 // Load the modal behavior script.
 JHtml::_('behavior.framework');
 ?>
-<?php if (\$this->item->state == 0): ?>
+<?php if (\$this->item->published == 0): ?>
 	<span class="label label-warning"><?php echo JText::_('JUNPUBLISHED'); ?></span>
 <?php endif; ?>
-<?php if (\$params->get('show_title') || \$this->item->state == 0 || (\$params->get('show_author') && !empty(\$this->item->author ))): ?>
+<?php if (\$params->get('show_title') || \$this->item->published == 0 || (\$params->get('show_author') && !empty(\$this->item->author ))): ?>
 	<div class="page-header">
 		<?php if (\$params->get('show_title')): ?>
 			<h2>
@@ -26,7 +26,7 @@ JHtml::_('behavior.framework');
 			</h2>
 		<?php endif; ?>
 
-		<?php if (\$this->item->state == 0): ?>
+		<?php if (\$this->item->published == 0): ?>
 			<span class="label label-warning"><?php echo JText::_('JUNPUBLISHED'); ?></span>
 		<?php endif; ?>
 	</div>

@@ -20,7 +20,7 @@
 			size="40"
 			required="true" />
 		<field
-			name="state"
+			name="published"
 			type="list"
 			class="chzn-color-state"
 			label="JSTATUS"

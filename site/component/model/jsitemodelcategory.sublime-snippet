@@ -93,7 +93,7 @@ class ${TM_COMPONENT/(.+)/\u\1/g}ModelCategory extends JModelList
 				'checked_out', 'a.checked_out',
 				'checked_out_time', 'a.checked_out_time',
 				'catid', 'a.catid', 'category_title',
-				'state', 'a.state',
+				'published', 'a.published',
 				'access', 'a.access', 'access_level',
 				'created', 'a.created',
 				'created_by', 'a.created_by',

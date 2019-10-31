@@ -207,7 +207,7 @@ class ${1:${TM_COMPONENT/(.+)/\u\1/g}}Model${2:Users} extends JModelList
 				->select('n.user_id, COUNT(n.id) As note_count')
 				->from('#__user_notes AS n')
 				->where('n.user_id IN (' . implode(',', \$userIds) . ')')
-				->where('n.state >= 0')
+				->where('n.published >= 0')
 				->group('n.user_id');
 
 			\$db->setQuery(\$query);

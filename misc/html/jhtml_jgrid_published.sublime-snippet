@@ -1,5 +1,5 @@
 <snippet>
-	<content><![CDATA[JHtml::_('jgrid.published', \$item->state, \$i, '${1:${TM_PLURAL/(.+)/\L\1/g}}.', ${2:\$canChange, 'cb', \$item->publish_up, \$item->publish_down});]]></content>
+	<content><![CDATA[JHtml::_('jgrid.published', \$item->published, \$i, '${1:${TM_PLURAL/(.+)/\L\1/g}}.', ${2:\$canChange, 'cb', \$item->publish_up, \$item->publish_down});]]></content>
 	<tabTrigger>jhtml_jgrid_published</tabTrigger>
 	<scope>source.php</scope>
 </snippet>

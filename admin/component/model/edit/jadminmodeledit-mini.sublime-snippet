@@ -33,7 +33,7 @@ class ${1/(.+)/\u\1/g}Model${2:${TM_FILENAME/(.*?)(\..+)/\u$1/}} extends JModelA
 	{
 		if (!empty(\$record->id))
 		{
-			if (\$record->state != -2)
+			if (\$record->published != -2)
 			{
 				return;
 			}
@@ -85,7 +85,7 @@ class ${1/(.+)/\u\1/g}Model${2:${TM_FILENAME/(.*?)(\..+)/\u$1/}} extends JModelA
 		// Reorder the ${3:${2/(.+)/\L\1/g}s} so the new ${2/(.+)/\L\1/g} is first.
 		if (empty(\$table->id))
 		{
-			\$table->reorder('state >= 0');
+			\$table->reorder('published >= 0');
 		}
 	}
 
@@ -152,12 +152,12 @@ class ${1/(.+)/\u\1/g}Model${2:${TM_FILENAME/(.*?)(\..+)/\u$1/}} extends JModelA
 		if (\$id == 0 && !\$user->authorise('core.edit.state', 'com_${1/(.+)/\L\1/g}'))
 		{
 			// Disable fields for display.
-			\$form->setFieldAttribute('state', 'disabled', 'true');
+			\$form->setFieldAttribute('published', 'disabled', 'true');
 			\$form->setFieldAttribute('ordering', 'disabled', 'true');
 
 			// Disable fields while saving.
 			// The controller has already verified this is an ${2/(.+)/\L\1/g} you can edit.
-			\$form->setFieldAttribute('state', 'filter', 'unset');
+			\$form->setFieldAttribute('published', 'filter', 'unset');
 			\$form->setFieldAttribute('ordering', 'filter', 'unset');
 		}
 

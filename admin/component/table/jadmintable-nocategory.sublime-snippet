@@ -314,7 +314,7 @@ class ${1/(.+)/\u\1/g}Table${2:${TM_FILENAME/(.*?)(\..+)/\u$1/}} extends JTable
 
 		// Update the publishing state for rows with the given primary keys.
 		\$query->update(\$this->_db->quoteName(\$this->_tbl))
-			->set(\$this->_db->quoteName('state') . ' = ' . (int) \$state)
+			->set(\$this->_db->quoteName('published') . ' = ' . (int) \$state)
 			->where('(' . \$where . ')' . \$checkin);
 		\$this->_db->setQuery(\$query);
 

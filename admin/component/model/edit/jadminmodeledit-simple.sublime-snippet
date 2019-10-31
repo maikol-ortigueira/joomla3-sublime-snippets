@@ -114,7 +114,7 @@ class ${1/(.+)/\u\1/g}Model${2:${TM_FILENAME/(.*?)(\..+)/\u$1/}} extends JModelA
 	{
 		if (!empty(\$record->id))
 		{
-			if (\$record->state != -2)
+			if (\$record->published != -2)
 			{
 				return;
 			}
@@ -166,12 +166,12 @@ class ${1/(.+)/\u\1/g}Model${2:${TM_FILENAME/(.*?)(\..+)/\u$1/}} extends JModelA
 		// Set the publish date to now.
 		\$db = \$this->getDbo();
 
-		if (\$table->state == 1 && (int) \$table->publish_up == 0)
+		if (\$table->published == 1 && (int) \$table->publish_up == 0)
 		{
 			\$table->publish_up = JFactory::getDate()->toSql();
 		}
 
-		if (\$table->state == 1 && intval(\$table->publish_down) == 0)
+		if (\$table->published == 1 && intval(\$table->publish_down) == 0)
 		{
 			\$table->publish_down = \$db->getNullDate();
 		}
@@ -182,7 +182,7 @@ class ${1/(.+)/\u\1/g}Model${2:${TM_FILENAME/(.*?)(\..+)/\u$1/}} extends JModelA
 		// Reorder the ${5:${2/(.+)/\L\1/g}s} so the new ${2/(.+)/\L\1/g} is first.
 		if (empty(\$table->id))
 		{
-			\$table->reorder('state >= 0');
+			\$table->reorder('published >= 0');
 		}
 	}
 
@@ -297,14 +297,14 @@ class ${1/(.+)/\u\1/g}Model${2:${TM_FILENAME/(.*?)(\..+)/\u$1/}} extends JModelA
 			|| (\$id == 0 && !\$user->authorise('core.edit.state', 'com_${1/(.+)/\L\1/g}')))
 		{
 			// Disable fields for display.
-			\$form->setFieldAttribute('state', 'disabled', 'true');
+			\$form->setFieldAttribute('published', 'disabled', 'true');
 			\$form->setFieldAttribute('ordering', 'disabled', 'true');
 			\$form->setFieldAttribute('publish_up', 'disabled', 'true');
 			\$form->setFieldAttribute('publish_down', 'disabled', 'true');
 
 			// Disable fields while saving.
 			// The controller has already verified this is an ${2/(.+)/\L\1/g} you can edit.
-			\$form->setFieldAttribute('state', 'filter', 'unset');
+			\$form->setFieldAttribute('published', 'filter', 'unset');
 			\$form->setFieldAttribute('ordering', 'filter', 'unset');
 			\$form->setFieldAttribute('publish_up', 'filter', 'unset');
 			\$form->setFieldAttribute('publish_down', 'filter', 'unset');
@@ -367,7 +367,7 @@ class ${1/(.+)/\u\1/g}Model${2:${TM_FILENAME/(.*?)(\..+)/\u$1/}} extends JModelA
 
 			\$data['${3/(.+)/\L\1/g}'] = \$${3/(.+)/\L\1/g};
 			\$data['alias'] = \$alias;
-			\$data['state'] = 0;
+			\$data['published'] = 0;
 		}
 
 		if (parent::save(\$data))

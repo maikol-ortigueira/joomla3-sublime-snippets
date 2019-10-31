@@ -31,7 +31,7 @@ abstract class Mod${1:${TM_MODULE/(\_+)//g}}Helper
 
 		// Set List SELECT.
 		\$model->setState('list.select', 'a.id, a.${3:title}, a.checked_out, a.checked_out_time' .
-				', a.access, a.created, a.created_by, a.created_by_alias, a.featured, a.state');
+				', a.access, a.created, a.created_by, a.created_by_alias, a.featured, a.published');
 
 		// Set Ordering filter.
 		switch (\$params->get('ordering'))

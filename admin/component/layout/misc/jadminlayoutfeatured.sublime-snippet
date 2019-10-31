@@ -42,7 +42,7 @@ JHtml::_('formbehavior.chosen', 'select');
 							<?php echo JHtml::_('grid.checkall'); ?>
 						</th>
 						<th width="1%" style="min-width: 55px;" class="nowrap center">
-							<?php echo JHtml::_('searchtools.sort', 'JSTATUS', 'a.state', \$listDirn, \$listOrder); ?>
+							<?php echo JHtml::_('searchtools.sort', 'JSTATUS', 'a.published', \$listDirn, \$listOrder); ?>
 						</th>
 						<th>
 							<?php echo JHtml::_('searchtools.sort', 'COM_${1/(.+)/\U\1/g}_HEADING_${4/(.+)/\U\1/g}', 'a.${4:title}', \$listDirn, \$listOrder); ?>
@@ -95,7 +95,7 @@ JHtml::_('formbehavior.chosen', 'select');
 							</td>
 							<td class="center">
 								<div class="btn-group">
-									<?php echo JHtml::_('jgrid.published', \$item->state, \$i, '${5:${3/(.+)/\L\1/g}s}.', \$canChange, 'cb', \$item->publish_up, \$item->publish_down); ?>
+									<?php echo JHtml::_('jgrid.published', \$item->published, \$i, '${5:${3/(.+)/\L\1/g}s}.', \$canChange, 'cb', \$item->publish_up, \$item->publish_down); ?>
 									<?php echo JHtml::_('${3/(.+)/\L\1/g}.featured', \$item->featured, \$i, \$canChange); ?>
 									<?php
 									// Create dropdown items.

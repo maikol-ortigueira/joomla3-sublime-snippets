@@ -138,8 +138,8 @@ abstract class JHtml${1:${TM_FILENAME/(.*?)(\..+)/\u$1/}}
 			return;
 		}
 
-		// Ignore if the state is negative (trashed).
-		if (\$${2/(.+)/\L\1/g}->state < 0)
+		// Ignore if the published is negative (trashed).
+		if (\$${2/(.+)/\L\1/g}->published < 0)
 		{
 			return;
 		}
@@ -159,7 +159,7 @@ abstract class JHtml${1:${TM_FILENAME/(.*?)(\..+)/\u$1/}}
 
 		\$url = 'index.php?option=com_${TM_COMPONENT/(.+)/\L\1/g}&task=${2/(.+)/\L\1/g}.edit&${TM_COMPONENT/(.)(.+)/\L\1/g}_id=' . \$${2/(.+)/\L\1/g}->id . '&return=' . base64_encode(\$uri);
 
-		if (\$${2/(.+)/\L\1/g}->state == 0)
+		if (\$${2/(.+)/\L\1/g}->published == 0)
 		{
 			\$overlib = JText::_('JUNPUBLISHED');
 		}
@@ -178,12 +178,12 @@ abstract class JHtml${1:${TM_FILENAME/(.*?)(\..+)/\u$1/}}
 
 		if (\$legacy)
 		{
-			\$icon = \$${2/(.+)/\L\1/g}->state ? 'edit.png' : 'edit_unpublished.png';
+			\$icon = \$${2/(.+)/\L\1/g}->published ? 'edit.png' : 'edit_unpublished.png';
 			\$text = JHtml::_('image', 'system/' . \$icon, JText::_('JGLOBAL_EDIT'), null, true);
 		}
 		else
 		{
-			\$icon = \$${2/(.+)/\L\1/g}->state ? 'edit' : 'eye-close';
+			\$icon = \$${2/(.+)/\L\1/g}->published ? 'edit' : 'eye-close';
 			\$text = '<span class="hasTooltip icon-' . \$icon . ' tip" title="' . JHtml::tooltipText(JText::_('COM_${TM_COMPONENT/(.+)/\U\1/g}_EDIT_ITEM'), \$overlib, 0) . '"></span>&#160;' . JText::_('JGLOBAL_EDIT') . '&#160;';
 		}
 

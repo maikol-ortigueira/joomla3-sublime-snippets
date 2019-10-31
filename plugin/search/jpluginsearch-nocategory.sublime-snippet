@@ -160,7 +160,7 @@ class PlgSearch${1:${TM_COMPONENT/(.+)/\u\1/g}} extends JPlugin
 				. \$case_when . ', '
 				. \$db->quote(\$section) . ' AS section, \'2\' AS browsernav')
 				->from(\$db->quoteName('#__${TM_COMPONENT/(.+)/\L\1/g}${4:_${1/(.+)/\L\1/g}}') . ' AS a')
-				->where('(' . \$where . ')' . ' AND a.state in (' . implode(', ', \$state) . ')')
+				->where('(' . \$where . ')' . ' AND a.published in (' . implode(', ', \$state) . ')')
 				->order(\$order);
 
 			// Filter by language.

@@ -57,7 +57,7 @@ protected function prepareTable(\$table)
 	// Reorder the ${3:${TM_PLURAL/(.+)/\L\1/g}} within the category so the new ${4:${TM_SINGULAR/(.+)/\L\1/g}} is first.
 	if (empty(\$table->id))
 	{
-		\$table->reorder('catid = ' . (int) \$table->catid . ' AND state >= 0');
+		\$table->reorder('catid = ' . (int) \$table->catid . ' AND published >= 0');
 	}
 }]]></content>
 	<tabTrigger>jadminmodeledit_preparetable</tabTrigger>

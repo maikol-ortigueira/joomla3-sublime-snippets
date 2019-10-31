@@ -23,12 +23,12 @@
 			required="true"
 			size="40" />
 		<field
-			name="state"
+			name="published"
 			type="list"
 			class="inputbox span12 small"
 			label="JSTATUS"
 			description="JFIELD_PUBLISHED_DESC"
-			id="state"
+			id="published"
 			default="1"
 			size="1">
 			<option value="1">JPUBLISHED</option>

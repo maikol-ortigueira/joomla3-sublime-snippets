@@ -31,7 +31,7 @@ class ${1/(.+)/\u\1/g}Model${2:Featured} extends ${1/(.+)/\u\1/g}Model${3/(.+)/\
 				'checked_out', 'a.checked_out',
 				'checked_out_time', 'a.checked_out_time',
 				'catid', 'a.catid', 'category_title',
-				'state', 'a.state',
+				'published', 'a.published',
 				'access', 'a.access', 'access_level',
 				'created', 'a.created',
 				'created_by', 'a.created_by',
@@ -73,7 +73,7 @@ class ${1/(.+)/\u\1/g}Model${2:Featured} extends ${1/(.+)/\u\1/g}Model${3/(.+)/\
 			\$this->getState(
 				'list.select',
 				'a.id, a.catid, a.${4/(.+)/\L\1/g}, a.alias, a.checked_out, a.checked_out_time' .
-					', a.state, a.access, a.language, a.created, a.created_by_alias, a.hits' .
+					', a.published, a.access, a.language, a.created, a.created_by_alias, a.hits' .
 					', a.publish_up, a.publish_down, a.featured'
 			)
 		);
@@ -114,11 +114,11 @@ class ${1/(.+)/\u\1/g}Model${2:Featured} extends ${1/(.+)/\u\1/g}Model${3/(.+)/\
 
 		if (is_numeric(\$published))
 		{
-			\$query->where('a.state = ' . (int) \$published);
+			\$query->where('a.published = ' . (int) \$published);
 		}
 		elseif (\$published === '')
 		{
-			\$query->where('(a.state = 0 OR a.state = 1)');
+			\$query->where('(a.published = 0 OR a.published = 1)');
 		}
 
 		// Filter by a single or group of categories.

@@ -27,7 +27,7 @@ class ${1:${TM_COMPONENT/(.+)/\u\1/g}}Model${2:${TM_FILENAME/(.*?)(\..+)/\u$1/}}
 				'alias', 'a.alias',
 				'checked_out', 'a.checked_out',
 				'checked_out_time', 'a.checked_out_time',
-				'state', 'a.state',
+				'published', 'a.published',
 				'access', 'a.access', 'access_level',
 				'created', 'a.created',
 				'created_by', 'a.created_by',
@@ -150,7 +150,7 @@ class ${1:${TM_COMPONENT/(.+)/\u\1/g}}Model${2:${TM_FILENAME/(.*?)(\..+)/\u$1/}}
 			\$this->getState(
 				'list.select',
 				'a.id, a.${4/(.+)/\L\1/g}, a.alias, a.checked_out, a.checked_out_time' .
-					', a.state, a.ordering, a.access, a.language, a.created, a.created_by, a.created_by_alias, a.featured, a.hits' .
+					', a.published, a.ordering, a.access, a.language, a.created, a.created_by, a.created_by_alias, a.featured, a.hits' .
 					', a.publish_up, a.publish_down'
 			)
 		);
@@ -199,11 +199,11 @@ class ${1:${TM_COMPONENT/(.+)/\u\1/g}}Model${2:${TM_FILENAME/(.*?)(\..+)/\u$1/}}
 
 		if (is_numeric(\$published))
 		{
-			\$query->where('a.state = ' . (int) \$published);
+			\$query->where('a.published = ' . (int) \$published);
 		}
 		elseif (\$published === '')
 		{
-			\$query->where('(a.state = 0 OR a.state = 1)');
+			\$query->where('(a.published = 0 OR a.published = 1)');
 		}
 
 		// Filter by author.

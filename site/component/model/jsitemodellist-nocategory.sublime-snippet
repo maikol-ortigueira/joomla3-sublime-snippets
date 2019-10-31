@@ -26,7 +26,7 @@ class ${TM_COMPONENT/(.+)/\u\1/g}Model${1:${TM_FILENAME/(.*?)(\..+)/\u$1/}} exte
 				'alias', 'a.alias',
 				'checked_out', 'a.checked_out',
 				'checked_out_time', 'a.checked_out_time',
-				'state', 'a.state',
+				'published', 'a.published',
 				'access', 'a.access', 'access_level',
 				'created', 'a.created',
 				'created_by', 'a.created_by',
@@ -216,7 +216,7 @@ class ${TM_COMPONENT/(.+)/\u\1/g}Model${1:${TM_FILENAME/(.*?)(\..+)/\u$1/}} exte
 
 		if (is_numeric(\$published))
 		{
-			\$query->where('a.state = ' . (int) \$published);
+			\$query->where('a.published = ' . (int) \$published);
 		}
 		elseif (is_array(\$published))
 		{
@@ -224,7 +224,7 @@ class ${TM_COMPONENT/(.+)/\u\1/g}Model${1:${TM_FILENAME/(.*?)(\..+)/\u$1/}} exte
 
 			\$published = implode(',', \$published);
 
-			\$query->where('a.state IN (' . \$published . ')');
+			\$query->where('a.published IN (' . \$published . ')');
 		}
 
 		// Filter by featured state.

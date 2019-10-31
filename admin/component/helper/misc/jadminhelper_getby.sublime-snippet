@@ -18,7 +18,7 @@ public static function get${1:${TM_PLURAL/(.+)/\u\1/g}}By${2:Segment}(\$id, \$li
 	// Create the base select statement.
 	\$query->select('a.id, a.${3:title}, a.alias')
 		->from(\$db->quoteName('#__${TM_COMPONENT/(.+)/\L\1/g}$4') . ' AS a')
-		->where(\$db->quoteName('a.state') . ' = ' . \$db->quote('1'))
+		->where(\$db->quoteName('a.published') . ' = ' . \$db->quote('1'))
 		->where(\$db->quoteName('a.$5') . ' = ' . \$db->quote((int) \$id))
 		->order(\$db->quoteName('a.${6:hits}') . ' ASC limit 0,' . (int) \$limit);
 
