@@ -74,7 +74,7 @@ if (isset(\$this->item->params['show_images_backend']) && \$this->item->params['
 		<?php echo JLayoutHelper::render('joomla.edit.title_alias', \$this); ?>
 		<div class="form-horizontal">
 			<?php echo JHtml::_('bootstrap.startTabSet', 'myTab', array('active' => 'general')); ?>
-				<?php echo JHtml::_('bootstrap.addTab', 'myTab', 'general', JText::_('COM_${1/(.+)/\U\1/g}_FIELDSET_${2/(.+)/\U\1/g}_CONTENT', true)); ?>
+				<?php echo JHtml::_('bootstrap.addTab', 'myTab', 'general', JText::_('COM_${1/(.+)/\U\1/g}_${2/(.+)//G}_FIELDSET_CONTENT', true)); ?>
 					<div class="row-fluid">
 						<div class="span9">
 							<fieldset class="adminform">
